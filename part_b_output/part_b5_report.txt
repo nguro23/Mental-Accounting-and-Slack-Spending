@@ -1,0 +1,268 @@
+
+==============================================================================
+A. BUILD-UP: from the raw association to the preferred specification (main sample)
+==============================================================================
+Which ingredient removes the positive raw association? Same two outcomes, savings coefficient shown.
+                                Specification    Outcome  Variable  Estimate      SE      p      N
+                        A1 no controls, no FE disc_spend promo_nec  0.532*** (0.022) <0.001 55,180
+                        A1 no controls, no FE disc_spend    coupon  0.473*** (0.126) <0.001 55,180
+                                 A2 + week FE disc_spend promo_nec  0.537*** (0.022) <0.001 55,180
+                                 A2 + week FE disc_spend    coupon  0.459*** (0.126) <0.001 55,180
+                            A3 + household FE disc_spend promo_nec  0.477*** (0.016) <0.001 55,180
+                            A3 + household FE disc_spend    coupon  0.459*** (0.084) <0.001 55,180
+          A4 two-way FE, no necessity control disc_spend promo_nec  0.483*** (0.016) <0.001 55,180
+          A4 two-way FE, no necessity control disc_spend    coupon  0.444*** (0.082) <0.001 55,180
+                A5 no FE, + NecessitySpending disc_spend promo_nec -0.080*** (0.028)  0.005 55,180
+                A5 no FE, + NecessitySpending disc_spend    coupon   0.270** (0.117)  0.020 55,180
+A6 two-way FE + NecessitySpending (preferred) disc_spend promo_nec    -0.018 (0.014)  0.188 55,180
+A6 two-way FE + NecessitySpending (preferred) disc_spend    coupon  0.197*** (0.074)  0.008 55,180
+                        A1 no controls, no FE disc_share promo_nec -0.373*** (0.019) <0.001 55,180
+                        A1 no controls, no FE disc_share    coupon   0.136** (0.058)  0.019 55,180
+                                 A2 + week FE disc_share promo_nec -0.370*** (0.019) <0.001 55,180
+                                 A2 + week FE disc_share    coupon   0.122** (0.058)  0.035 55,180
+                            A3 + household FE disc_share promo_nec -0.397*** (0.014) <0.001 55,180
+                            A3 + household FE disc_share    coupon     0.061 (0.045)  0.174 55,180
+          A4 two-way FE, no necessity control disc_share promo_nec -0.394*** (0.014) <0.001 55,180
+          A4 two-way FE, no necessity control disc_share    coupon     0.042 (0.044)  0.337 55,180
+                A5 no FE, + NecessitySpending disc_share promo_nec -0.058*** (0.020)  0.003 55,180
+                A5 no FE, + NecessitySpending disc_share    coupon  0.241*** (0.059) <0.001 55,180
+A6 two-way FE + NecessitySpending (preferred) disc_share promo_nec -0.072*** (0.014) <0.001 55,180
+A6 two-way FE + NecessitySpending (preferred) disc_share    coupon  0.200*** (0.044) <0.001 55,180
+
+==============================================================================
+B. BASKET-SIZE CONTROL AND SAVINGS MEASURE (two-way FE, main sample)
+==============================================================================
+Net vs shelf control: NecessitySpending is measured NET of markdowns. Holding it fixed while savings rise means the
+household bought MORE necessities at shelf prices. The shelf-price control (net + savings) holds the planned basket fixed.
+Algebra: beta(savings | shelf control) = beta(savings | net control) - beta(NecessitySpending | net control).
+                              Specification    Outcome       Variable  Estimate      SE      p      N
+        B1 preferred: net NecessitySpending disc_spend      promo_nec    -0.018 (0.014)  0.188 55,180
+        B1 preferred: net NecessitySpending disc_spend         coupon  0.197*** (0.074)  0.008 55,180
+   B2 shelf-price NecessitySpending control disc_spend      promo_nec -0.180*** (0.017) <0.001 55,180
+   B2 shelf-price NecessitySpending control disc_spend         coupon  0.197*** (0.074)  0.008 55,180
+                    B3 no necessity control disc_spend      promo_nec  0.483*** (0.016) <0.001 55,180
+                    B3 no necessity control disc_spend         coupon  0.444*** (0.082) <0.001 55,180
+B4 savings on ALL items (secondary measure) disc_spend      promo_all  0.392*** (0.022) <0.001 55,180
+B4 savings on ALL items (secondary measure) disc_spend         coupon    -0.022 (0.057)  0.701 55,180
+         B5 markdown depth %, shelf control disc_spend promo_nec_rate -0.033*** (0.007) <0.001 52,914
+         B5 markdown depth %, shelf control disc_spend         coupon   0.163** (0.070)  0.020 52,914
+        B1 preferred: net NecessitySpending disc_share      promo_nec -0.072*** (0.014) <0.001 55,180
+        B1 preferred: net NecessitySpending disc_share         coupon  0.200*** (0.044) <0.001 55,180
+   B2 shelf-price NecessitySpending control disc_share      promo_nec    0.031* (0.016)  0.058 55,180
+   B2 shelf-price NecessitySpending control disc_share         coupon  0.200*** (0.044) <0.001 55,180
+                    B3 no necessity control disc_share      promo_nec -0.394*** (0.014) <0.001 55,180
+                    B3 no necessity control disc_share         coupon     0.042 (0.044)  0.337 55,180
+B4 savings on ALL items (secondary measure) disc_share      promo_all  0.250*** (0.015) <0.001 55,180
+B4 savings on ALL items (secondary measure) disc_share         coupon     0.048 (0.041)  0.243 55,180
+         B5 markdown depth %, shelf control disc_share promo_nec_rate  0.040*** (0.012) <0.001 52,914
+         B5 markdown depth %, shelf control disc_share         coupon  0.160*** (0.038) <0.001 52,914
+Note: B4 is mechanically linked to discretionary spending (it includes savings ON discretionary items); B5 uses the
+markdown DEPTH (% of shelf value), which varies independently of basket size.
+
+==============================================================================
+C. COUPON DEFINITIONS (two-way FE)
+==============================================================================
+                    Specification    Outcome   Variable  Estimate      SE      p      N
+   C1 coupon value ($), preferred disc_spend  promo_nec    -0.018 (0.014)  0.188 55,180
+   C1 coupon value ($), preferred disc_spend     coupon  0.197*** (0.074)  0.008 55,180
+         C2 coupon redeemed (0/1) disc_spend  promo_nec    -0.019 (0.014)  0.174 55,180
+         C2 coupon redeemed (0/1) disc_spend coupon_any  1.861*** (0.221) <0.001 55,180
+C3 coupon value winsorised at p99 disc_spend  promo_nec    -0.020 (0.014)  0.135 55,180
+C3 coupon value winsorised at p99 disc_spend   coupon_w  0.459*** (0.077) <0.001 55,180
+   C1 coupon value ($), preferred disc_share  promo_nec -0.072*** (0.014) <0.001 55,180
+   C1 coupon value ($), preferred disc_share     coupon  0.200*** (0.044) <0.001 55,180
+         C2 coupon redeemed (0/1) disc_share  promo_nec -0.070*** (0.014) <0.001 55,180
+         C2 coupon redeemed (0/1) disc_share coupon_any   0.595** (0.240)  0.013 55,180
+C3 coupon value winsorised at p99 disc_share  promo_nec -0.072*** (0.014) <0.001 55,180
+C3 coupon value winsorised at p99 disc_share   coupon_w  0.290*** (0.062) <0.001 55,180
+
+==============================================================================
+D. OUTCOME DEFINITIONS (two-way FE, preferred controls)
+==============================================================================
+                 Specification           Outcome  Variable  Estimate      SE      p      N
+       D narrow definition ($) disc_narrow_spend promo_nec    -0.008 (0.013)  0.551 55,180
+       D narrow definition ($) disc_narrow_spend    coupon     0.106 (0.074)  0.150 55,180
+        D broad definition ($)  disc_broad_spend promo_nec -0.045*** (0.017)  0.007 55,180
+        D broad definition ($)  disc_broad_spend    coupon  0.427*** (0.127) <0.001 55,180
+ D excluding sugary drinks ($) disc_xsugar_spend promo_nec  -0.026** (0.012)  0.032 55,180
+ D excluding sugary drinks ($) disc_xsugar_spend    coupon     0.047 (0.045)  0.299 55,180
+       D excluding alcohol ($)   disc_xalc_spend promo_nec    -0.002 (0.012)  0.858 55,180
+       D excluding alcohol ($)   disc_xalc_spend    coupon  0.258*** (0.070) <0.001 55,180
+D asinh(DiscretionarySpending)        asinh_disc promo_nec     0.002 (0.001)  0.129 55,180
+D asinh(DiscretionarySpending)        asinh_disc    coupon   0.010** (0.005)  0.045 55,180
+      D narrow definition (pp) disc_narrow_share promo_nec -0.072*** (0.014) <0.001 55,180
+      D narrow definition (pp) disc_narrow_share    coupon  0.149*** (0.044) <0.001 55,180
+       D broad definition (pp)  disc_broad_share promo_nec -0.092*** (0.016) <0.001 55,180
+       D broad definition (pp)  disc_broad_share    coupon  0.404*** (0.068) <0.001 55,180
+D excluding sugary drinks (pp) disc_xsugar_share promo_nec -0.039*** (0.011) <0.001 55,180
+D excluding sugary drinks (pp) disc_xsugar_share    coupon     0.011 (0.031)  0.732 55,180
+      D excluding alcohol (pp)   disc_xalc_share promo_nec -0.071*** (0.013) <0.001 55,180
+      D excluding alcohol (pp)   disc_xalc_share    coupon  0.215*** (0.042) <0.001 55,180
+
+==============================================================================
+E. SAMPLES (two-way FE, preferred controls)
+==============================================================================
+                                  Specification    Outcome  Variable  Estimate      SE      p       N
+               E1 weeks with total spend >= $10 disc_spend promo_nec    -0.021 (0.014)  0.119  50,171
+               E1 weeks with total spend >= $10 disc_spend    coupon  0.201*** (0.072)  0.005  50,171
+               E1 weeks with total spend >= $10 disc_share promo_nec -0.064*** (0.013) <0.001  50,171
+               E1 weeks with total spend >= $10 disc_share    coupon  0.183*** (0.043) <0.001  50,171
+                      E2 weeks with <= 10 trips disc_spend promo_nec   -0.023* (0.014)  0.091  54,699
+                      E2 weeks with <= 10 trips disc_spend    coupon   0.181** (0.071)  0.011  54,699
+                      E2 weeks with <= 10 trips disc_share promo_nec -0.075*** (0.014) <0.001  54,699
+                      E2 weeks with <= 10 trips disc_share    coupon  0.208*** (0.045) <0.001  54,699
+          E4 households with >= 52 active weeks disc_spend promo_nec    -0.011 (0.015)  0.435  50,168
+          E4 households with >= 52 active weeks disc_spend    coupon  0.272*** (0.084)  0.001  50,168
+          E4 households with >= 52 active weeks disc_share promo_nec -0.074*** (0.015) <0.001  50,168
+          E4 households with >= 52 active weeks disc_share    coupon  0.224*** (0.046) <0.001  50,168
+            E3 variables winsorised at 1% / 99% disc_spend promo_nec    -0.013 (0.012)  0.284  55,180
+            E3 variables winsorised at 1% / 99% disc_spend    coupon  0.432*** (0.067) <0.001  55,180
+            E3 variables winsorised at 1% / 99% disc_share promo_nec -0.085*** (0.015) <0.001  55,180
+            E3 variables winsorised at 1% / 99% disc_share    coupon  0.313*** (0.061) <0.001  55,180
+E5 ALL households >= 10 weeks (no demographics) disc_spend promo_nec    -0.009 (0.010)  0.375 119,989
+E5 ALL households >= 10 weeks (no demographics) disc_spend    coupon  0.308*** (0.060) <0.001 119,989
+               E6 household-trip (basket) panel disc_spend promo_nec  -0.030** (0.013)  0.024 124,410
+               E6 household-trip (basket) panel disc_spend    coupon  0.296*** (0.069) <0.001 124,410
+E5 ALL households >= 10 weeks (no demographics) disc_share promo_nec -0.057*** (0.011) <0.001 119,989
+E5 ALL households >= 10 weeks (no demographics) disc_share    coupon  0.323*** (0.040) <0.001 119,989
+               E6 household-trip (basket) panel disc_share promo_nec -0.100*** (0.028) <0.001 124,410
+               E6 household-trip (basket) panel disc_share    coupon  0.637*** (0.090) <0.001 124,410
+
+==============================================================================
+F. PLACEBO, DYNAMICS AND FALSIFICATION (two-way FE)
+==============================================================================
+                                     Specification       Outcome       Variable  Estimate      SE      p      N
+F1 placebo: add NEXT week's savings (should be ~0)    disc_spend      promo_nec    -0.010 (0.016)  0.534 43,673
+F1 placebo: add NEXT week's savings (should be ~0)    disc_spend promo_nec_lead     0.011 (0.009)  0.216 43,673
+F1 placebo: add NEXT week's savings (should be ~0)    disc_spend         coupon  0.220*** (0.076)  0.004 43,673
+           F2 add previous and next week's savings    disc_spend      promo_nec    -0.001 (0.018)  0.958 36,292
+           F2 add previous and next week's savings    disc_spend  promo_nec_lag  0.034*** (0.009) <0.001 36,292
+           F2 add previous and next week's savings    disc_spend promo_nec_lead     0.010 (0.009)  0.295 36,292
+           F2 add previous and next week's savings    disc_spend         coupon   0.192** (0.079)  0.015 36,292
+F1 placebo: add NEXT week's savings (should be ~0)    disc_share      promo_nec -0.067*** (0.015) <0.001 43,673
+F1 placebo: add NEXT week's savings (should be ~0)    disc_share promo_nec_lead    -0.007 (0.010)  0.487 43,673
+F1 placebo: add NEXT week's savings (should be ~0)    disc_share         coupon  0.214*** (0.046) <0.001 43,673
+           F2 add previous and next week's savings    disc_share      promo_nec -0.056*** (0.016) <0.001 36,292
+           F2 add previous and next week's savings    disc_share  promo_nec_lag  0.041*** (0.011) <0.001 36,292
+           F2 add previous and next week's savings    disc_share promo_nec_lead    -0.004 (0.011)  0.726 36,292
+           F2 add previous and next week's savings    disc_share         coupon  0.203*** (0.047) <0.001 36,292
+            F3 falsification: Neutral spending ($) neutral_spend      promo_nec -0.073*** (0.010) <0.001 55,180
+            F3 falsification: Neutral spending ($) neutral_spend         coupon  0.352*** (0.049) <0.001 55,180
+              F4 falsification: Neutral share (pp) neutral_share      promo_nec  -0.020** (0.009)  0.021 55,180
+              F4 falsification: Neutral share (pp) neutral_share         coupon  0.294*** (0.037) <0.001 55,180
+
+==============================================================================
+G. WHERE DOES THE MONEY GO? effect of $1 savings / coupon on each category (two-way FE, NO necessity control)
+==============================================================================
+             Specification          Outcome  Variable Estimate      SE      p      N
+ G Total merchandise spend      total_spend promo_nec 3.985*** (0.086) <0.001 55,180
+ G Total merchandise spend      total_spend    coupon 2.795*** (0.306) <0.001 55,180
+         G Necessity spend        nec_spend promo_nec 3.101*** (0.060) <0.001 55,180
+         G Necessity spend        nec_spend    coupon 1.524*** (0.189) <0.001 55,180
+    G Discretionary (main)       disc_spend promo_nec 0.483*** (0.016) <0.001 55,180
+    G Discretionary (main)       disc_spend    coupon 0.444*** (0.082) <0.001 55,180
+G Discretionary (extended) other_disc_spend promo_nec 0.067*** (0.006) <0.001 55,180
+G Discretionary (extended) other_disc_spend    coupon 0.276*** (0.077) <0.001 55,180
+           G Neutral spend    neutral_spend promo_nec 0.334*** (0.013) <0.001 55,180
+           G Neutral spend    neutral_spend    coupon 0.552*** (0.056) <0.001 55,180
+
+Check (identity): necessity + main disc + extended disc + neutral = 3.9855  vs total_spend = 3.9855
+Net necessity spend can FALL with savings (net of markdowns), so read 'total' and 'necessity' together with the
+shelf-price view: shelf necessity spend = net + savings.
+
+==============================================================================
+H. HETEROGENEITY (two-way FE within each subsample, preferred controls)
+==============================================================================
+   Specification    Outcome  Variable  Estimate      SE      p      N
+        H < $35K disc_spend promo_nec    -0.009 (0.027)  0.724 14,727
+        H < $35K disc_spend    coupon   0.471** (0.238)  0.047 14,727
+        H < $35K disc_share promo_nec  -0.055** (0.028)  0.047 14,727
+        H < $35K disc_share    coupon     0.122 (0.104)  0.239 14,727
+       H $35-74K disc_spend promo_nec    -0.021 (0.019)  0.276 25,130
+       H $35-74K disc_spend    coupon    0.206* (0.118)  0.080 25,130
+       H $35-74K disc_share promo_nec -0.075*** (0.021) <0.001 25,130
+       H $35-74K disc_share    coupon  0.314*** (0.055) <0.001 25,130
+         H $75K+ disc_spend promo_nec    -0.008 (0.027)  0.769 15,323
+         H $75K+ disc_spend    coupon     0.020 (0.090)  0.827 15,323
+         H $75K+ disc_share promo_nec   -0.040* (0.023)  0.076 15,323
+         H $75K+ disc_share    coupon     0.079 (0.072)  0.272 15,323
+      H 1 person disc_spend promo_nec    -0.019 (0.025)  0.461 17,964
+      H 1 person disc_spend    coupon     0.141 (0.134)  0.292 17,964
+      H 1 person disc_share promo_nec    -0.031 (0.027)  0.252 17,964
+      H 1 person disc_share    coupon    0.133* (0.074)  0.072 17,964
+     H 2 persons disc_spend promo_nec    -0.029 (0.020)  0.159 21,690
+     H 2 persons disc_spend    coupon     0.170 (0.140)  0.226 21,690
+     H 2 persons disc_share promo_nec -0.098*** (0.022) <0.001 21,690
+     H 2 persons disc_share    coupon  0.204*** (0.063)  0.001 21,690
+    H 3+ persons disc_spend promo_nec    -0.008 (0.027)  0.753 15,526
+    H 3+ persons disc_spend    coupon  0.261*** (0.094)  0.005 15,526
+    H 3+ persons disc_share promo_nec -0.076*** (0.023) <0.001 15,526
+    H 3+ persons disc_share    coupon  0.246*** (0.084)  0.003 15,526
+ H Children (1+) disc_spend promo_nec    -0.001 (0.026)  0.974 16,548
+ H Children (1+) disc_spend    coupon  0.252*** (0.090)  0.005 16,548
+ H Children (1+) disc_share promo_nec -0.076*** (0.022) <0.001 16,548
+ H Children (1+) disc_share    coupon  0.228*** (0.080)  0.004 16,548
+H None / unknown disc_spend promo_nec   -0.028* (0.016)  0.082 38,632
+H None / unknown disc_spend    coupon     0.162 (0.101)  0.109 38,632
+H None / unknown disc_share promo_nec -0.071*** (0.018) <0.001 38,632
+H None / unknown disc_share    coupon  0.183*** (0.052) <0.001 38,632
+    H weeks 1-51 disc_spend promo_nec    -0.018 (0.019)  0.361 24,117
+    H weeks 1-51 disc_spend    coupon    0.143* (0.086)  0.096 24,117
+    H weeks 1-51 disc_share promo_nec -0.076*** (0.019) <0.001 24,117
+    H weeks 1-51 disc_share    coupon     0.083 (0.067)  0.215 24,117
+  H weeks 52-102 disc_spend promo_nec    -0.013 (0.017)  0.438 31,063
+  H weeks 52-102 disc_spend    coupon   0.217** (0.094)  0.021 31,063
+  H weeks 52-102 disc_share promo_nec -0.075*** (0.016) <0.001 31,063
+  H weeks 52-102 disc_share    coupon  0.254*** (0.053) <0.001 31,063
+
+==============================================================================
+I. NON-LINEARITY: quartiles of PromotionSavings (lowest quartile = reference; two-way FE)
+==============================================================================
+Quartile cut-points of promo_nec ($): [1.68, 5.66, 12.78]
+     Specification    Outcome Variable  Estimate      SE      p      N
+I quartile dummies disc_spend   sav_q2  1.274*** (0.175) <0.001 55,180
+I quartile dummies disc_spend   sav_q3  2.228*** (0.240) <0.001 55,180
+I quartile dummies disc_spend   sav_q4  2.043*** (0.293) <0.001 55,180
+I quartile dummies disc_spend   coupon  0.203*** (0.073)  0.005 55,180
+I quartile dummies disc_share   sav_q2 -7.016*** (0.356) <0.001 55,180
+I quartile dummies disc_share   sav_q3 -8.289*** (0.388) <0.001 55,180
+I quartile dummies disc_share   sav_q4 -8.176*** (0.441) <0.001 55,180
+I quartile dummies disc_share   coupon  0.150*** (0.040) <0.001 55,180
+
+==============================================================================
+J. FRACTIONAL-RESPONSE MODEL FOR THE SHARE (logit, Mundlak form, household-clustered)
+==============================================================================
+                Control  Variable  Logit coef     SE      p  APE (pp per $1)  APE SE (approx.)
+  net NecessitySpending promo_nec     -0.0046 0.0009 0.0000          -0.0766            0.0151
+  net NecessitySpending    coupon      0.0147 0.0029 0.0000           0.2416            0.0485
+shelf NecessitySpending promo_nec      0.0029 0.0011 0.0084           0.0483            0.0183
+shelf NecessitySpending    coupon      0.0147 0.0029 0.0000           0.2416            0.0485
+APE = average partial effect on the share in percentage points; its SE here is approximate (ignores estimation of the scale factor). Compare with the linear estimates in blocks A and B.
+
+==============================================================================
+K. COUPONS BY ITEM CATEGORY (two-way FE)
+==============================================================================
+Coupons attach to specific items, so a coupon on a discretionary item is mechanically part of discretionary spending.
+If the positive coupon coefficient comes from coupons on discretionary items, it is not evidence of reallocation.
+                                  Specification    Outcome    Variable  Estimate      SE      p      N
+             K1 coupons on necessity items only disc_spend   promo_nec    -0.011 (0.014)  0.422 55,180
+             K1 coupons on necessity items only disc_spend  coupon_nec -0.295*** (0.058) <0.001 55,180
+K2 coupons on necessity and discretionary items disc_spend   promo_nec    -0.021 (0.014)  0.123 55,180
+K2 coupons on necessity and discretionary items disc_spend  coupon_nec -0.561*** (0.067) <0.001 55,180
+K2 coupons on necessity and discretionary items disc_spend coupon_disc  3.325*** (0.176) <0.001 55,180
+             K1 coupons on necessity items only disc_share   promo_nec -0.069*** (0.014) <0.001 55,180
+             K1 coupons on necessity items only disc_share  coupon_nec     0.000 (0.057)  1.000 55,180
+K2 coupons on necessity and discretionary items disc_share   promo_nec -0.076*** (0.014) <0.001 55,180
+K2 coupons on necessity and discretionary items disc_share  coupon_nec -0.201*** (0.060) <0.001 55,180
+K2 coupons on necessity and discretionary items disc_share coupon_disc  2.510*** (0.209) <0.001 55,180
+
+==============================================================================
+SUMMARY: how many robustness specifications show a positive, negative or null effect?
+==============================================================================
+                                  Variable group     Outcome type  Specifications  Positive & p<.05  Negative & p<.05  Not significant
+Savings (promo_nec / promo_all / markdown depth) levels / dollars              29                 2                 5               22
+Savings (promo_nec / promo_all / markdown depth)      shares / pp              28                 2                23                3
+            Coupon (value / binary / winsorised) levels / dollars              29                20                 0                9
+            Coupon (value / binary / winsorised)      shares / pp              28                21                 0                7
+
+Saved b5_tables.xlsx and b5_summary.csv in part_b_output

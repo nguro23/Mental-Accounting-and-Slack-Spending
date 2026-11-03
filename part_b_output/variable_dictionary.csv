@@ -1,0 +1,22 @@
+variable,definition
+household_key / week_no,Household id and week (1-102); the panel keys. Time fixed effects use week_no.
+total_spend,"Sum of SALES_VALUE over merchandise lines in the household-week (excludes fuel, coupon/misc, services)."
+nec_spend,Spend on Necessity commodities.
+disc_spend,DiscretionarySpending (MAIN definition: core hedonic + borderline snacks).
+disc_narrow_spend / disc_broad_spend,Discretionary spend under the narrow (core only) and broad (core + extended) definitions.
+disc_xsugar_spend / disc_xalc_spend,Main discretionary spend excluding sugary drinks / alcohol (robustness).
+neutral_spend,Spend on Neutral commodities (falsification outcome).
+disc_share,"DiscretionaryShare = 100 * disc_spend / total_spend (also _narrow_, _broad_ versions)."
+nec_share / neutral_share,Necessity and Neutral shares of total_spend.
+promo_nec,"PromotionSavings (PRIMARY): sum of max(-RETAIL_DISC, 0) on Necessity items."
+promo_all,"PromotionSavings (secondary): same, on all merchandise."
+promo_disc / promo_neutral,"Same, on main-discretionary / Neutral items (diagnostics; mechanically linked to disc_spend)."
+promo_nec_rate,Necessity markdown depth: 100 * promo_nec / (nec_spend + promo_nec); NaN if no necessity spend.
+nec_spend_shelf,Necessity spend before markdowns (nec_spend + promo_nec); alternative control.
+coupon / coupon_any,Coupon: sum of -(COUPON_DISC + COUPON_MATCH_DISC) (>=0); coupon_any = 1 if > 0.
+spend_net_coupon,total_spend minus coupon value (sensitivity if SALES_VALUE is gross of coupons).
+n_baskets / n_lines,Trips and merchandise lines in the household-week.
+income_k_mid / income_band,"Income band midpoint ($000, assumption: 250K+ -> 275) and ordinal band 1-12."
+hh_size_num,Household size (5+ top-coded at 5).
+has_kids,"1 if KID_CATEGORY_DESC is 1, 2 or 3+; 0 if 'None/Unknown' (mixes none and unknown)."
+has_demo,1 if the household has a record in hh_demographic (all 1 in hw_main).

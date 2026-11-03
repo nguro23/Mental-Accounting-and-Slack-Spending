@@ -1,0 +1,10 @@
+Hypothesis,Test,Coefficient,SE,p_two_sided,p_one_sided,Decision,p_one_sided_two_way_cluster,Same_decision_two_way_clustering,Note
+H1,Model 1 (c): beta on PromotionSavings > 0,-0.0182,0.0139,0.1884,0.9058,Fail to reject H0,0.9137,Yes,
+H2 (savings),Model 2 (c): beta on PromotionSavings > 0,-0.0723,0.0139,0.0,1.0,Fail to reject H0,1.0,Yes,
+H2 (coupon),Model 2 (c): beta on Coupon > 0,0.2,0.0443,0.0,0.0,Reject H0,0.0009,Yes,
+H3 (Model 1),"Model 1, (a) Pooled + controls: beta on PromotionSavings > 0",-0.051,0.0259,0.0493,0.9754,Fail to reject H0,0.9754,Yes,
+H3 (Model 1),"Model 1, (b) Mundlak CRE: beta on PromotionSavings > 0",-0.0182,0.0139,0.1907,0.9046,Fail to reject H0,0.9046,Yes,
+H3 (Model 1),"Model 1, (c) Two-way FE: beta on PromotionSavings > 0",-0.0182,0.0139,0.1884,0.9058,Fail to reject H0,0.9137,Yes,
+"H3 (Model 2, supplementary)","Model 2, (a) Pooled + controls: beta on PromotionSavings > 0",-0.0491,0.0186,0.0081,0.996,Fail to reject H0,0.996,Yes,
+"H3 (Model 2, supplementary)","Model 2, (b) Mundlak CRE: beta on PromotionSavings > 0",-0.0717,0.0139,0.0,1.0,Fail to reject H0,1.0,Yes,
+"H3 (Model 2, supplementary)","Model 2, (c) Two-way FE: beta on PromotionSavings > 0",-0.0723,0.0139,0.0,1.0,Fail to reject H0,1.0,Yes,

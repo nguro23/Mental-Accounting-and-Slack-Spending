@@ -1,0 +1,20 @@
+Variable,"(1) Pooled, no controls",(a) Pooled + controls,(b) Mundlak CRE,(c) Two-way FE
+"PromotionSavings (necessity items, $)",-0.373***,-0.049***,-0.072***,-0.072***
+,(0.019),(0.019),(0.014),(0.014)
+Coupon value ($),0.136**,0.212***,0.200***,0.200***
+,(0.058),(0.059),(0.044),(0.044)
+NecessitySpending ($),,-0.102***,-0.104***,-0.104***
+,,(0.006),(0.004),(0.004)
+"Income (per $10k, band midpoint)",,0.039,0.031,
+,,(0.067),(0.072),
+Household size (persons),,0.299,0.262,
+,,(0.457),(0.456),
+Has children (0/1),,1.256,1.173,
+,,(1.174),(1.171),
+Observations,"55,180","55,180","55,180","55,180"
+Households,801,801,801,801
+"R-squared (columns 1, a, b); within R-squared (column c)",0.037,0.062,0.063,0.055
+Week fixed effects,No,Yes,Yes,Yes
+Household fixed effects,No,No,No,Yes
+Demographic controls,No,Yes,Yes,absorbed
+Household means of regressors (Mundlak),No,No,Yes,n/a

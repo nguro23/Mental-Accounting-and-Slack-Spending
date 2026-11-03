@@ -1,0 +1,169 @@
+
+==============================================================================
+1. PANEL STRUCTURE
+==============================================================================
+Observations (household-weeks): 55,180   households N = 801   distinct weeks T = 102   regressors K = 3
+Observations per household: min 21, p25 58, median 71, p75 81, max 101
+Balance: 55,180 of 81,702 possible household-weeks observed (67.5%) -> unbalanced panel
+Households with at least one gap between observed weeks: 97.5%; median number of gaps per household: 14
+Missing values in model variables: 0
+Decision: unbalanced panel is acceptable for fixed-effects estimation (within estimator needs no balance); tests below use unbalanced-panel formulas.
+
+==============================================================================
+2. DISTRIBUTIONS AND TRANSFORMATIONS
+==============================================================================
+        variable  mean    sd  skewness  excess_kurtosis  share_zero   p1    p99
+      disc_spend 14.10 16.25      2.58            11.91       0.143 0.00  74.11
+asinh_disc_spend  2.61  1.42     -0.57            -0.63       0.143 0.00   5.00
+      disc_share 21.26 20.17      1.65             3.28       0.143 0.00 100.00
+     total_spend 72.78 64.31      1.60             3.28       0.000 2.38 294.88
+       nec_spend 46.29 44.58      1.71             3.92       0.041 0.00 201.88
+       promo_nec  9.06 10.57      2.42             9.95       0.106 0.00  48.10
+ asinh_promo_nec  2.24  1.28     -0.30            -0.90       0.106 0.00   4.57
+       promo_all 13.44 14.13      2.23             8.51       0.047 0.00  64.88
+          coupon  0.47  1.95      9.84           170.60       0.859 0.00   9.00
+
+Skewness of disc_spend is 2.58 in levels and -0.57 after the inverse hyperbolic sine transform (compare absolute values, and see the histograms).
+Decision: if the spending outcomes are right-skewed with a mass at zero (check skewness and share_zero above) -> keep levels (dollars, easy to interpret) as the baseline and report asinh() as a robustness check; log(x) is not usable because of the zeros.
+
+Share outcome (0-100) and small-basket noise:
+  disc_share == 0   : 14.3%     disc_share == 100: 1.6%
+  household-weeks with total_spend < $ 5: 3.5%   (of which disc_share is 0 or 100: 80.1%)
+  household-weeks with total_spend < $10: 9.1%   (of which disc_share is 0 or 100: 65.5%)
+  household-weeks with total_spend < $20: 20.0%   (of which disc_share is 0 or 100: 48.8%)
+Decision: shares from very small baskets are mechanically 0 or 100 -> estimate Model 2 on all weeks, and as a robustness check restrict to total_spend >= $10 and/or weight by total_spend; add a fractional-response model.
+Saved figure b2_distributions.png
+
+==============================================================================
+3. MULTICOLLINEARITY (VIF of the three regressors)
+==============================================================================
+regressor  VIF_pooled  VIF_within(two-way)
+promo_nec        2.49                 2.57
+   coupon        1.08                 1.07
+nec_spend        2.47                 2.59
+Correlation of the regressors after removing household and week effects:
+           promo_nec  coupon  nec_spend
+promo_nec       1.00    0.23       0.78
+coupon          0.23    1.00       0.25
+nec_spend       0.78    0.25       1.00
+Decision: max VIF = 2.59 -> acceptable (< 5).
+
+==============================================================================
+4. PANEL UNIT-ROOT CHECK (Fisher-type ADF, indicative)
+==============================================================================
+Households with >= 40 observed weeks; series ordered by week (gaps ignored); ADF with constant, 2 lags.
+  disc_spend             stat =   12,711.435   df = 1504           p = <0.0001  -> Reject: series are stationary -> levels are fine
+      share of households rejecting a unit root individually at 5%: 94.0%
+  disc_share             stat =   13,940.119   df = 1504           p = <0.0001  -> Reject: series are stationary -> levels are fine
+      share of households rejecting a unit root individually at 5%: 96.4%
+  promo_nec              stat =   14,051.675   df = 1504           p = <0.0001  -> Reject: series are stationary -> levels are fine
+      share of households rejecting a unit root individually at 5%: 96.5%
+Note: the panel is unbalanced with gaps, so this is indicative; time fixed effects absorb common trends.
+
+==============================================================================
+5. POOLABILITY AND MODEL CHOICE
+==============================================================================
+F-test for household effects (pooled OLS + week effects  vs  two-way FE):
+  M1 disc_spend          stat =       24.553   df = (800, 54275)   p = <0.0001  -> Reject: household effects needed (FE over pooled)
+  M1b asinh(disc_spend)  stat =       19.187   df = (800, 54275)   p = <0.0001  -> Reject: household effects needed (FE over pooled)
+  M2 disc_share          stat =       14.361   df = (800, 54275)   p = <0.0001  -> Reject: household effects needed (FE over pooled)
+
+F-test for time effects (household FE  vs  two-way FE):
+  M1 disc_spend          stat =        4.336   df = (101, 54275)   p = <0.0001  -> Reject: keep week fixed effects
+  M1b asinh(disc_spend)  stat =        2.765   df = (101, 54275)   p = <0.0001  -> Reject: keep week fixed effects
+  M2 disc_share          stat =        2.573   df = (101, 54275)   p = <0.0001  -> Reject: keep week fixed effects
+
+Breusch-Pagan LM test for random household effects (Baltagi-Li form for unbalanced panels; pooled OLS + week effects):
+  M1 disc_spend          stat =  149,806.279   df = 1              p = <0.0001  -> Reject: panel model needed over pooled OLS
+  M1b asinh(disc_spend)  stat =   88,414.855   df = 1              p = <0.0001  -> Reject: panel model needed over pooled OLS
+  M2 disc_share          stat =   53,851.864   df = 1              p = <0.0001  -> Reject: panel model needed over pooled OLS
+
+Mundlak (correlated random effects) test = robust Hausman: joint test that the household means of the regressors are zero, SEs clustered by household:
+  M1 disc_spend          stat =       29.903   df = 3              p = <0.0001  -> Reject: random effects inconsistent -> use fixed effects
+  M1b asinh(disc_spend)  stat =       30.559   df = 3              p = <0.0001  -> Reject: random effects inconsistent -> use fixed effects
+  M2 disc_share          stat =        6.772   df = 3              p = 0.0795   -> Do not reject: random effects acceptable
+(The classical Hausman test is invalid with clustered errors, which is why the Mundlak version is used.)
+
+==============================================================================
+6. SERIAL CORRELATION, HETEROSKEDASTICITY, CROSS-SECTIONAL DEPENDENCE
+==============================================================================
+Wooldridge (2002) first-difference test for serial correlation (H0: no serial correlation, rho = -0.5):
+  M1 disc_spend          stat =       -3.257   df = t, 798         p = 0.0012   -> Reject: serial correlation present -> cluster SEs by household
+  M1b asinh(disc_spend)  stat =       -3.876   df = t, 798         p = 0.0001   -> Reject: serial correlation present -> cluster SEs by household
+  M2 disc_share          stat =       -3.021   df = t, 798         p = 0.0026   -> Reject: serial correlation present -> cluster SEs by household
+
+Breusch-Pagan / Koenker heteroskedasticity test on two-way FE residuals:
+  M1 disc_spend          stat =      469.217   df = 3              p = <0.0001  -> Reject: heteroskedasticity -> robust (clustered) SEs
+  M1b asinh(disc_spend)  stat =    1,121.505   df = 3              p = <0.0001  -> Reject: heteroskedasticity -> robust (clustered) SEs
+  M2 disc_share          stat =    3,257.330   df = 3              p = <0.0001  -> Reject: heteroskedasticity -> robust (clustered) SEs
+
+Pesaran (2015) CD test for cross-sectional dependence, on household-FE residuals (pairs with >= 10 common weeks).
+This asks whether households share weekly shocks (holidays, promotion calendars) that week effects should absorb.
+  M1 disc_spend          stat =       25.583   df = 319,991 pairs  p = <0.0001  -> Reject: common weekly shocks -> keep week FE and report two-way clustered SEs
+  M1b asinh(disc_spend)  stat =       11.954   df = 319,991 pairs  p = <0.0001  -> Reject: common weekly shocks -> keep week FE and report two-way clustered SEs
+  M2 disc_share          stat =       12.592   df = 319,991 pairs  p = <0.0001  -> Reject: common weekly shocks -> keep week FE and report two-way clustered SEs
+(Not repeated after two-way FE: removing week effects forces residuals to sum to ~zero within each week, which mechanically makes the CD statistic negative. Section 7 checks inference with week and two-way clustering instead.)
+
+==============================================================================
+7. INFERENCE CHOICE: standard errors under alternative assumptions (two-way FE, M1)
+==============================================================================
+Standard errors:
+                                     promo_nec  coupon  nec_spend
+classical (dof-corrected)               0.0091  0.0307     0.0023
+heteroskedasticity-robust (HC1)         0.0121  0.0499     0.0031
+cluster: household                      0.0139  0.0740     0.0046
+cluster: week                           0.0115  0.0807     0.0029
+two-way cluster: household and week     0.0134  0.0974     0.0045
+
+Ratio to the household-clustered SE (values > 1 mean clustering by household is less conservative):
+                                     promo_nec  coupon  nec_spend
+classical (dof-corrected)                 0.66    0.41       0.49
+heteroskedasticity-robust (HC1)           0.87    0.67       0.68
+cluster: household                        1.00    1.00       1.00
+cluster: week                             0.83    1.09       0.64
+two-way cluster: household and week       0.96    1.32       0.97
+Decision: household-clustered SEs are the baseline (Bertrand, Duflo & Mullainathan, 2004); report two-way (household and week) clustered SEs as a check.
+
+==============================================================================
+8. REPRESENTATIVENESS: households with vs without demographics (clean panel, all households >= 10 active weeks)
+==============================================================================
+Households: with demographics = 801, without = 1552
+          variable  with_demographics  without  standardised_diff
+      active_weeks              68.89    41.76               1.43
+           baskets             155.32    79.81               0.73
+ mean_weekly_spend              71.13    45.37               0.80
+   mean_disc_share              21.18    23.02              -0.19
+    mean_promo_nec               8.91     5.97               0.61
+share_weeks_coupon               0.14     0.06               0.56
+
+==============================================================================
+9. SUMMARY TABLE FOR CHAPTER 4.4
+==============================================================================
+                                                  test               outcome  statistic            df p_value                                                                      decision
+                          Max VIF (rule of thumb 5-10)            regressors       2.59                                                                                    Acceptable (< 5)
+Fisher ADF (H0: all series have a unit root), k=752 hh            disc_spend  12,711.43          1504 <0.0001                              Reject: series are stationary -> levels are fine
+Fisher ADF (H0: all series have a unit root), k=752 hh            disc_share  13,940.12          1504 <0.0001                              Reject: series are stationary -> levels are fine
+Fisher ADF (H0: all series have a unit root), k=752 hh             promo_nec  14,051.67          1504 <0.0001                              Reject: series are stationary -> levels are fine
+                             F-test: household effects         M1 disc_spend      24.55  (800, 54275) <0.0001                             Reject: household effects needed (FE over pooled)
+                             F-test: household effects M1b asinh(disc_spend)      19.19  (800, 54275) <0.0001                             Reject: household effects needed (FE over pooled)
+                             F-test: household effects         M2 disc_share      14.36  (800, 54275) <0.0001                             Reject: household effects needed (FE over pooled)
+                                  F-test: week effects         M1 disc_spend       4.34  (101, 54275) <0.0001                                               Reject: keep week fixed effects
+                                  F-test: week effects M1b asinh(disc_spend)       2.77  (101, 54275) <0.0001                                               Reject: keep week fixed effects
+                                  F-test: week effects         M2 disc_share       2.57  (101, 54275) <0.0001                                               Reject: keep week fixed effects
+    Breusch-Pagan LM: variance of household effect = 0         M1 disc_spend 149,806.28             1 <0.0001                                    Reject: panel model needed over pooled OLS
+    Breusch-Pagan LM: variance of household effect = 0 M1b asinh(disc_spend)  88,414.85             1 <0.0001                                    Reject: panel model needed over pooled OLS
+    Breusch-Pagan LM: variance of household effect = 0         M2 disc_share  53,851.86             1 <0.0001                                    Reject: panel model needed over pooled OLS
+                     Mundlak test: household means = 0         M1 disc_spend      29.90             3 <0.0001                      Reject: random effects inconsistent -> use fixed effects
+                     Mundlak test: household means = 0 M1b asinh(disc_spend)      30.56             3 <0.0001                      Reject: random effects inconsistent -> use fixed effects
+                     Mundlak test: household means = 0         M2 disc_share       6.77             3  0.0795                                      Do not reject: random effects acceptable
+          Wooldridge serial correlation (rho = -0.520)         M1 disc_spend      -3.26        t, 798  0.0012                Reject: serial correlation present -> cluster SEs by household
+          Wooldridge serial correlation (rho = -0.516) M1b asinh(disc_spend)      -3.88        t, 798  0.0001                Reject: serial correlation present -> cluster SEs by household
+          Wooldridge serial correlation (rho = -0.515)         M2 disc_share      -3.02        t, 798  0.0026                Reject: serial correlation present -> cluster SEs by household
+            Breusch-Pagan (Koenker) heteroskedasticity         M1 disc_spend     469.22             3 <0.0001                          Reject: heteroskedasticity -> robust (clustered) SEs
+            Breusch-Pagan (Koenker) heteroskedasticity M1b asinh(disc_spend)   1,121.50             3 <0.0001                          Reject: heteroskedasticity -> robust (clustered) SEs
+            Breusch-Pagan (Koenker) heteroskedasticity         M2 disc_share   3,257.33             3 <0.0001                          Reject: heteroskedasticity -> robust (clustered) SEs
+   Pesaran CD, household-FE residuals (mean rho 0.006)         M1 disc_spend      25.58 319,991 pairs <0.0001 Reject: common weekly shocks -> keep week FE and report two-way clustered SEs
+   Pesaran CD, household-FE residuals (mean rho 0.003) M1b asinh(disc_spend)      11.95 319,991 pairs <0.0001 Reject: common weekly shocks -> keep week FE and report two-way clustered SEs
+   Pesaran CD, household-FE residuals (mean rho 0.003)         M2 disc_share      12.59 319,991 pairs <0.0001 Reject: common weekly shocks -> keep week FE and report two-way clustered SEs
+
+Saved diagnostics_table.csv, representativeness_table.csv, b2_distributions.png in part_b_output

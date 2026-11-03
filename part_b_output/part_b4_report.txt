@@ -1,0 +1,109 @@
+Main sample: 55,180 household-weeks, 801 households, 102 weeks
+
+==============================================================================
+MODEL 1: DISCRETIONARYSPENDING ($)  -  coefficients with household-clustered SEs in parentheses (* p<0.10, ** p<0.05, *** p<0.01)
+==============================================================================
+                                                Variable (1) Pooled, no controls (a) Pooled + controls (b) Mundlak CRE (c) Two-way FE
+                   PromotionSavings (necessity items, $)                0.532***              -0.051**          -0.018         -0.018
+                                                                         (0.022)               (0.026)         (0.014)        (0.014)
+                                        Coupon value ($)                0.473***               0.247**        0.197***       0.197***
+                                                                         (0.126)               (0.116)         (0.074)        (0.074)
+                                   NecessitySpending ($)                                      0.181***        0.162***       0.162***
+                                                                                               (0.008)         (0.005)        (0.005)
+                        Income (per $10k, band midpoint)                                      0.244***         0.178**               
+                                                                                               (0.083)         (0.087)               
+                                Household size (persons)                                         0.061          -0.056               
+                                                                                               (0.426)         (0.420)               
+                                      Has children (0/1)                                         0.837           0.795               
+                                                                                               (1.038)         (1.039)               
+                                            Observations                  55,180                55,180          55,180         55,180
+                                              Households                     801                   801             801            801
+R-squared (columns 1, a, b); within R-squared (column c)                   0.133                 0.256           0.260          0.195
+                                      Week fixed effects                      No                   Yes             Yes            Yes
+                                 Household fixed effects                      No                    No              No            Yes
+                                    Demographic controls                      No                   Yes             Yes       absorbed
+                 Household means of regressors (Mundlak)                      No                    No             Yes            n/a
+Mean of the dependent variable: 14.096
+
+==============================================================================
+MODEL 2: DISCRETIONARYSHARE (PP)  -  coefficients with household-clustered SEs in parentheses (* p<0.10, ** p<0.05, *** p<0.01)
+==============================================================================
+                                                Variable (1) Pooled, no controls (a) Pooled + controls (b) Mundlak CRE (c) Two-way FE
+                   PromotionSavings (necessity items, $)               -0.373***             -0.049***       -0.072***      -0.072***
+                                                                         (0.019)               (0.019)         (0.014)        (0.014)
+                                        Coupon value ($)                 0.136**              0.212***        0.200***       0.200***
+                                                                         (0.058)               (0.059)         (0.044)        (0.044)
+                                   NecessitySpending ($)                                     -0.102***       -0.104***      -0.104***
+                                                                                               (0.006)         (0.004)        (0.004)
+                        Income (per $10k, band midpoint)                                         0.039           0.031               
+                                                                                               (0.067)         (0.072)               
+                                Household size (persons)                                         0.299           0.262               
+                                                                                               (0.457)         (0.456)               
+                                      Has children (0/1)                                         1.256           1.173               
+                                                                                               (1.174)         (1.171)               
+                                            Observations                  55,180                55,180          55,180         55,180
+                                              Households                     801                   801             801            801
+R-squared (columns 1, a, b); within R-squared (column c)                   0.037                 0.062           0.063          0.055
+                                      Week fixed effects                      No                   Yes             Yes            Yes
+                                 Household fixed effects                      No                    No              No            Yes
+                                    Demographic controls                      No                   Yes             Yes       absorbed
+                 Household means of regressors (Mundlak)                      No                    No             Yes            n/a
+Mean of the dependent variable: 21.258
+
+==============================================================================
+HYPOTHESIS TESTS (one-sided, 5%; direction = positive effect)
+==============================================================================
+H2 joint Wald test, Model 2 (c): beta(PromotionSavings) = beta(Coupon) = 0:  chi2(2) = 46.59,  p = 0.0000
+                 Hypothesis                                                         Test  Coefficient     SE  p_two_sided  p_one_sided          Decision  p_one_sided_two_way_cluster Same_decision_two_way_clustering
+                         H1                    Model 1 (c): beta on PromotionSavings > 0      -0.0182 0.0139       0.1884       0.9058 Fail to reject H0                       0.9137                              Yes
+               H2 (savings)                    Model 2 (c): beta on PromotionSavings > 0      -0.0723 0.0139       0.0000       1.0000 Fail to reject H0                       1.0000                              Yes
+                H2 (coupon)                              Model 2 (c): beta on Coupon > 0       0.2000 0.0443       0.0000       0.0000         Reject H0                       0.0009                              Yes
+               H3 (Model 1) Model 1, (a) Pooled + controls: beta on PromotionSavings > 0      -0.0510 0.0259       0.0493       0.9754 Fail to reject H0                       0.9754                              Yes
+               H3 (Model 1)       Model 1, (b) Mundlak CRE: beta on PromotionSavings > 0      -0.0182 0.0139       0.1907       0.9046 Fail to reject H0                       0.9046                              Yes
+               H3 (Model 1)        Model 1, (c) Two-way FE: beta on PromotionSavings > 0      -0.0182 0.0139       0.1884       0.9058 Fail to reject H0                       0.9137                              Yes
+H3 (Model 2, supplementary) Model 2, (a) Pooled + controls: beta on PromotionSavings > 0      -0.0491 0.0186       0.0081       0.9960 Fail to reject H0                       0.9960                              Yes
+H3 (Model 2, supplementary)       Model 2, (b) Mundlak CRE: beta on PromotionSavings > 0      -0.0717 0.0139       0.0000       1.0000 Fail to reject H0                       1.0000                              Yes
+H3 (Model 2, supplementary)        Model 2, (c) Two-way FE: beta on PromotionSavings > 0      -0.0723 0.0139       0.0000       1.0000 Fail to reject H0                       1.0000                              Yes
+
+H3 (Model 1): effect positive and significant in ALL of (a), (b), (c)?  False  -> fail to reject H0 / effect does not persist
+
+H3 (Model 2, supplementary): effect positive and significant in ALL of (a), (b), (c)?  False  -> fail to reject H0 / effect does not persist
+
+==============================================================================
+INFERENCE CHECK (column c): household-clustered vs week-clustered vs two-way clustered SEs
+==============================================================================
+  Model                              Variable    Coef  SE (household)  p (household)  SE (week)  p (week)  SE (two-way)  p (two-way)
+Model 1 PromotionSavings (necessity items, $) -0.0182          0.0139         0.1884     0.0115    0.1131        0.0134       0.1726
+Model 1                      Coupon value ($)  0.1970          0.0740         0.0077     0.0807    0.0146        0.0974       0.0432
+Model 1                 NecessitySpending ($)  0.1618          0.0046         0.0000     0.0029    0.0000        0.0045       0.0000
+Model 2 PromotionSavings (necessity items, $) -0.0723          0.0139         0.0000     0.0097    0.0000        0.0139       0.0000
+Model 2                      Coupon value ($)  0.2000          0.0443         0.0000     0.0563    0.0004        0.0639       0.0018
+Model 2                 NecessitySpending ($) -0.1036          0.0044         0.0000     0.0029    0.0000        0.0045       0.0000
+
+==============================================================================
+EFFECT SIZES AND INTERPRETATION AIDS (column c)
+==============================================================================
+  Model                                                                  Quantity            Value                                         Note
+Model 1                                       beta on PromotionSavings ($ per $1)        -0.018244                                             
+Model 1                                              95% CI (household-clustered)  [-0.045, 0.009]                                             
+Model 1                               within-household SD of PromotionSavings ($)         9.106981                                             
+Model 1                            effect of +1 within-SD of PromotionSavings ($)         -0.16615               -1.2% of the mean of Y (14.10)
+Model 1 elasticity at the means (% change in Y per 1% change in PromotionSavings)        -0.011729               mean X = $9.06, mean Y = 14.10
+Model 1    proportional-allocation benchmark (discretionary share of total spend)         0.193687 H0: beta = benchmark; z = -15.28, p = 0.0000
+Model 2                                      beta on PromotionSavings (pp per $1)        -0.072342                                             
+Model 2                                              95% CI (household-clustered) [-0.100, -0.045]                                             
+Model 2                               within-household SD of PromotionSavings ($)         9.106981                                             
+Model 2                           effect of +1 within-SD of PromotionSavings (pp)        -0.658818               -3.1% of the mean of Y (21.26)
+Model 2 elasticity at the means (% change in Y per 1% change in PromotionSavings)        -0.030838               mean X = $9.06, mean Y = 21.26
+
+Benchmark note: if $1 of savings were spent in the same proportions as the existing basket, discretionary spending would rise by about $0.19. It is a heuristic (the control for necessity spending already absorbs part of the scale effect), not a structural test of mental accounting.
+
+==============================================================================
+FIGURES
+==============================================================================
+Saved b4_fig_stability.png and b4_fig_binned.png
+
+==============================================================================
+SAVE
+==============================================================================
+Saved b4_tables.xlsx and one CSV per table in part_b_output

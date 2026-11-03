@@ -1,0 +1,220 @@
+
+==============================================================================
+0. COLUMN NAMES (use these exact names in your code and in Chapter 3)
+==============================================================================
+transaction_data: ['household_key', 'basket_id', 'day', 'product_id', 'quantity', 'sales_value', 'store_id', 'retail_disc', 'trans_time', 'week_no', 'coupon_disc', 'coupon_match_disc']
+product: ['product_id', 'manufacturer', 'department', 'brand', 'commodity_desc', 'sub_commodity_desc', 'curr_size_of_product']
+hh_demographic: ['age_desc', 'marital_status_code', 'income_desc', 'homeowner_desc', 'hh_comp_desc', 'household_size_desc', 'kid_category_desc', 'household_key']
+
+==============================================================================
+1. PANEL DIMENSIONS (proposal says 2,500 households and 104 weeks)
+==============================================================================
+Rows in transaction_data: 2,595,732
+Distinct households: 2500
+WEEK_NO min / max: 1 / 102
+Distinct weeks observed: 102
+DAY min / max: 1 / 711 (~ days in window)
+Distinct baskets (trips): 276,484
+
+Active weeks per household:
+count    2500.0
+mean       49.6
+std        25.5
+min         1.0
+25%        28.0
+50%        50.0
+75%        71.0
+max       102.0
+Share of households active in >= 50 weeks: 0.501
+
+Baskets (visits) per household:
+count    2500.0
+mean      110.6
+std       115.7
+min         1.0
+25%        39.0
+50%        79.0
+75%       142.2
+max      1300.0
+
+Fully balanced household-week panel would have 255,000 rows;
+observed household-weeks with a purchase: 123,976
+
+==============================================================================
+2. DEMOGRAPHICS COVERAGE (proposal assumes complete demographics)
+==============================================================================
+Households in hh_demographic: 801
+Of those, also present in transaction_data: 801
+Households in transactions WITHOUT demographics: 1699
+
+income_desc:
+income_desc
+50-74K       192
+35-49K       172
+75-99K        96
+25-34K        77
+15-24K        74
+Under 15K     61
+125-149K      38
+100-124K      34
+150-174K      30
+250K+         11
+175-199K      11
+200-249K       5
+
+household_size_desc:
+household_size_desc
+2     318
+1     255
+3     109
+5+     66
+4      53
+
+kid_category_desc:
+kid_category_desc
+None/Unknown    558
+1               114
+3+               69
+2                60
+
+==============================================================================
+3. DISCOUNT FIELDS: SIGNS AND DEFINITIONS
+==============================================================================
+sales_value        min=     0.00  max=   840.00  share<0=0.000  share==0=0.007  sum=8,057,463
+retail_disc        min=  -180.00  max=     3.99  share<0=0.502  share==0=0.498  sum=-1,398,335
+coupon_disc        min=   -55.93  max=     0.00  share<0=0.014  share==0=0.986  sum=-42,612
+coupon_match_disc  min=    -7.70  max=     0.00  share<0=0.007  share==0=0.993  sum=-7,576
+
+Negative sales_value rows (returns / corrections): 0
+Zero or negative quantity rows: 14466
+
+Share of lines with any shelf/loyalty discount: 0.505
+Share of lines with a manufacturer coupon: 0.014
+Share of lines with a retailer-matched coupon: 0.0067
+Average implied discount rate on discounted lines: 0.246
+
+DECISION NEEDED: confirm in the data dictionary whether sales_value is already net of
+retail_disc and coupon_match_disc. This fixes the definition of total basket spend.
+
+==============================================================================
+4. PRODUCT CLASSIFICATION PREP
+==============================================================================
+Lines with no product metadata: 0
+
+Departments by share of total sales_value:
+department
+GROCERY            0.5081
+DRUG GM            0.1310
+PRODUCE            0.0692
+MEAT               0.0681
+KIOSK-GAS          0.0675
+MEAT-PCKGD         0.0512
+DELI               0.0324
+PASTRY             0.0151
+MISC SALES TRAN    0.0149
+NUTRITION          0.0121
+SEAFOOD-PCKGD      0.0078
+FLORAL             0.0049
+COSMETICS          0.0040
+SALAD BAR          0.0038
+SEAFOOD            0.0037
+SPIRITS            0.0027
+MISC. TRANS.       0.0013
+GARDEN CENTER      0.0010
+TRAVEL & LEISUR    0.0003
+CHEF SHOPPE        0.0003
+RESTAURANT         0.0002
+COUP/STR & MFG     0.0001
+FROZEN GROCERY     0.0001
+AUTOMOTIVE         0.0001
+RX                 0.0000
+GM MERCH EXP       0.0000
+DAIRY DELI         0.0000
+CNTRL/STORE SUP    0.0000
+PHOTO              0.0000
+DELI/SNACK BAR     0.0000
+VIDEO              0.0000
+POSTAL CENTER      0.0000
+VIDEO RENTAL       0.0000
+PHARMACY SUPPLY    0.0000
+PORK               0.0000
+TOYS               0.0000
+HBC                0.0000
+CHARITABLE CONT    0.0000
+PROD-WHS SALES     0.0000
+MEAT-WHSE          0.0000
+HOUSEWARES         0.0000
+GRO BAKERY         0.0000
+ELECT &PLUMBING    0.0000
+                   0.0000
+
+Saved part_a_output/commodity_mapping_TEMPLATE.csv (360 commodities). The 'category' column is filled in step A3.
+
+Provisional discretionary share of total sales_value: 0.176
+Top matched commodities (sanity check the keyword draft):
+commodity_desc
+SOFT DRINKS                       327647.0
+BAG SNACKS                        148375.0
+BEERS/ALES                        147344.0
+ICE CREAM/MILK/SHERBTS             82427.0
+CANDY - PACKAGED                   75886.0
+CRACKERS/MISC BKD FD               64529.0
+DOMESTIC WINE                      61592.0
+BAKED SWEET GOODS                  55091.0
+CONVENIENT BRKFST/WHLSM SNACKS     55069.0
+COOKIES/CONES                      54681.0
+CAKES                              38691.0
+MAGAZINE                           32786.0
+CANDY - CHECKLANE                  28123.0
+SUGARS/SWEETNERS                   27506.0
+LIQUOR                             23821.0
+IMPORTED WINE                      21499.0
+FROZEN PIE/DESSERTS                20835.0
+BREAKFAST SWEETS                   19664.0
+SNACK NUTS                         17328.0
+WAREHOUSE SNACKS                   15848.0
+COOKIES                            15203.0
+MOLASSES/SYRUP/PANCAKE MIXS        13504.0
+POPCORN                            12527.0
+DRY MIX DESSERTS                   11791.0
+MISC WINE                           9454.0
+
+==============================================================================
+5. MECHANICAL CORRELATION AND ZEROS (household-week panel, provisional classification)
+==============================================================================
+Household-week rows: 123,976
+Share of household-weeks with zero discretionary spend: 0.206
+Share of household-weeks with any coupon: 0.12
+Share of household-weeks with total_spend <= 0: 0.0007
+
+Correlations (these show the mechanical-correlation concern):
+             total_spend  disc_spend  disc_share  promo_all  promo_nec  promo_disc  coupon
+total_spend         1.00        0.68       -0.11       0.76       0.75        0.41    0.25
+disc_spend          0.68        1.00        0.34       0.55       0.43        0.59    0.18
+disc_share         -0.11        0.34        1.00      -0.07      -0.16        0.21   -0.02
+promo_all           0.76        0.55       -0.07       1.00       0.95        0.61    0.31
+promo_nec           0.75        0.43       -0.16       0.95       1.00        0.35    0.27
+promo_disc          0.41        0.59        0.21       0.61       0.35        1.00    0.23
+coupon              0.25        0.18       -0.02       0.31       0.27        0.23    1.00
+
+Read this as: if promo_all is much more correlated with disc_spend than promo_nec is,
+part of that link is mechanical (discounts ON discretionary items), which is why the
+primary regressor should be necessity-item savings.
+
+==============================================================================
+6. SAMPLE ATTRITION TABLE
+==============================================================================
+                                        step  households  baskets  household_weeks
+          All households in transaction_data        2500 276484.0           123976
+                          >= 10 store visits        2402 275876.0           123468
+                     + complete demographics         801 140339.0            56488
++ drop household-weeks with total spend <= 0         801      NaN            56463
+
+Outliers and bulk-purchase rules are NOT applied yet; they are added in Part B (step B1).
+
+==============================================================================
+7. COUPON REDEMPTION TABLE
+==============================================================================
+Rows in coupon_redempt: 2,318
+Households that ever redeemed: 434
+Coupon redemption is sparse; plan on a binary indicator as the main coupon variable.

@@ -1,0 +1,12 @@
+Model,Quantity,Value,Note
+Model 1,beta on PromotionSavings ($ per $1),-0.018244221209974036,
+Model 1,95% CI (household-clustered),"[-0.045, 0.009]",
+Model 1,within-household SD of PromotionSavings ($),9.106980921169805,
+Model 1,effect of +1 within-SD of PromotionSavings ($),-0.16614977448083504,-1.2% of the mean of Y (14.10)
+Model 1,elasticity at the means (% change in Y per 1% change in PromotionSavings),-0.011728532295299758,"mean X = $9.06, mean Y = 14.10"
+Model 1,proportional-allocation benchmark (discretionary share of total spend),0.1936865417734601,"H0: beta = benchmark; z = -15.28, p = 0.0000"
+Model 2,beta on PromotionSavings (pp per $1),-0.07234211166481641,
+Model 2,95% CI (household-clustered),"[-0.100, -0.045]",
+Model 2,within-household SD of PromotionSavings ($),9.106980921169805,
+Model 2,effect of +1 within-SD of PromotionSavings (pp),-0.6588182307286187,-3.1% of the mean of Y (21.26)
+Model 2,elasticity at the means (% change in Y per 1% change in PromotionSavings),-0.030838474007523157,"mean X = $9.06, mean Y = 21.26"

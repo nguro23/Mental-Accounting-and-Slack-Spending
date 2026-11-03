@@ -1,0 +1,11 @@
+# The raw Dunnhumby files are not redistributed (see README, "Getting the data")
+data/raw/*
+!data/raw/.gitkeep
+
+# Python and Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store

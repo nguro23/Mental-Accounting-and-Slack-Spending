@@ -1,0 +1,26 @@
+section,test,outcome,statistic,df,p_value,decision
+Multicollinearity,Max VIF (rule of thumb 5-10),regressors,2.592524450472849,,,Acceptable (< 5)
+Unit root,"Fisher ADF (H0: all series have a unit root), k=752 hh",disc_spend,12711.43463631727,1504,0.0,Reject: series are stationary -> levels are fine
+Unit root,"Fisher ADF (H0: all series have a unit root), k=752 hh",disc_share,13940.118598541261,1504,0.0,Reject: series are stationary -> levels are fine
+Unit root,"Fisher ADF (H0: all series have a unit root), k=752 hh",promo_nec,14051.674603481064,1504,0.0,Reject: series are stationary -> levels are fine
+Model choice,F-test: household effects,M1 disc_spend,24.552723943318092,"(800, 54275)",0.0,Reject: household effects needed (FE over pooled)
+Model choice,F-test: household effects,M1b asinh(disc_spend),19.186830905826696,"(800, 54275)",0.0,Reject: household effects needed (FE over pooled)
+Model choice,F-test: household effects,M2 disc_share,14.360796419694195,"(800, 54275)",0.0,Reject: household effects needed (FE over pooled)
+Model choice,F-test: week effects,M1 disc_spend,4.335634136690071,"(101, 54275)",2.9194355497796142e-43,Reject: keep week fixed effects
+Model choice,F-test: week effects,M1b asinh(disc_spend),2.7653589514495245,"(101, 54275)",1.413503411742628e-18,Reject: keep week fixed effects
+Model choice,F-test: week effects,M2 disc_share,2.5728498642402244,"(101, 54275)",6.692294267495386e-16,Reject: keep week fixed effects
+Model choice,Breusch-Pagan LM: variance of household effect = 0,M1 disc_spend,149806.27894583938,1,0.0,Reject: panel model needed over pooled OLS
+Model choice,Breusch-Pagan LM: variance of household effect = 0,M1b asinh(disc_spend),88414.85490391431,1,0.0,Reject: panel model needed over pooled OLS
+Model choice,Breusch-Pagan LM: variance of household effect = 0,M2 disc_share,53851.863666152836,1,0.0,Reject: panel model needed over pooled OLS
+Model choice,Mundlak test: household means = 0,M1 disc_spend,29.903295533420604,3,1.4462312341527936e-06,Reject: random effects inconsistent -> use fixed effects
+Model choice,Mundlak test: household means = 0,M1b asinh(disc_spend),30.55927017040233,3,1.0524999409254499e-06,Reject: random effects inconsistent -> use fixed effects
+Model choice,Mundlak test: household means = 0,M2 disc_share,6.77171526631093,3,0.07954111388075526,Do not reject: random effects acceptable
+Residual diagnostics,Wooldridge serial correlation (rho = -0.520),M1 disc_spend,-3.2571412413541725,"t, 798",0.0011729511194834678,Reject: serial correlation present -> cluster SEs by household
+Residual diagnostics,Wooldridge serial correlation (rho = -0.516),M1b asinh(disc_spend),-3.8756113764543545,"t, 798",0.00011509202384410523,Reject: serial correlation present -> cluster SEs by household
+Residual diagnostics,Wooldridge serial correlation (rho = -0.515),M2 disc_share,-3.0213883480641015,"t, 798",0.002596541920492373,Reject: serial correlation present -> cluster SEs by household
+Residual diagnostics,Breusch-Pagan (Koenker) heteroskedasticity,M1 disc_spend,469.2170897692707,3,2.2353892252780568e-101,Reject: heteroskedasticity -> robust (clustered) SEs
+Residual diagnostics,Breusch-Pagan (Koenker) heteroskedasticity,M1b asinh(disc_spend),1121.5049401991166,3,7.861834642819797e-243,Reject: heteroskedasticity -> robust (clustered) SEs
+Residual diagnostics,Breusch-Pagan (Koenker) heteroskedasticity,M2 disc_share,3257.3300400850267,3,0.0,Reject: heteroskedasticity -> robust (clustered) SEs
+Residual diagnostics,"Pesaran CD, household-FE residuals (mean rho 0.006)",M1 disc_spend,25.582805852456595,"319,991 pairs",2.3703598499617193e-144,Reject: common weekly shocks -> keep week FE and report two-way clustered SEs
+Residual diagnostics,"Pesaran CD, household-FE residuals (mean rho 0.003)",M1b asinh(disc_spend),11.953624160630612,"319,991 pairs",6.215442391064363e-33,Reject: common weekly shocks -> keep week FE and report two-way clustered SEs
+Residual diagnostics,"Pesaran CD, household-FE residuals (mean rho 0.003)",M2 disc_share,12.591606388287087,"319,991 pairs",2.348449017627293e-36,Reject: common weekly shocks -> keep week FE and report two-way clustered SEs

@@ -1,0 +1,6 @@
+step,households,household_weeks,baskets
+All households in transaction_data,2500,123976,276484
+"Merchandise lines only (non-merchandise and quantity <= 0 removed), total_spend > 0",2500,120993,250221
+>= 10 active weeks,2353,120110,249065
+Drop bulk-purchase weeks (total_spend > p99.9 = $441),2353,119989,248276
+MAIN SAMPLE: households with a demographic record,801,55180,124412

@@ -1,0 +1,5 @@
+step,households,baskets,household_weeks
+All households in transaction_data,2500,276484.0,123976
+>= 10 store visits,2402,275876.0,123468
++ complete demographics,801,140339.0,56488
++ drop household-weeks with total spend <= 0,801,,56463

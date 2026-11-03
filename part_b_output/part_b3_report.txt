@@ -1,0 +1,97 @@
+
+==============================================================================
+1. SUMMARY STATISTICS (household-week level, main sample)
+==============================================================================
+                                   Variable     N  Mean    SD  Min   P25  Median    P75    Max
+                  DiscretionarySpending ($) 55180 14.10 16.25  0.0  2.99    9.27  19.73 216.76
+                     DiscretionaryShare (%) 55180 21.26 20.17  0.0  7.23   16.65  29.10 100.00
+                      NecessitySpending ($) 55180 46.29 44.58  0.0 13.36   33.11  65.86 370.47
+                       Neutral spending ($) 55180  9.08 12.38  0.0  0.00    4.91  12.54 170.26
+                Total merchandise spend ($) 55180 72.78 64.31  0.2 24.92   54.62 101.91 439.67
+      PromotionSavings, necessity items ($) 55180  9.06 10.57  0.0  1.68    5.66  12.78 155.72
+            PromotionSavings, all items ($) 55180 13.44 14.13  0.0  3.42    9.24  18.86 172.17
+Necessity markdown depth (% of shelf value) 52914 15.47  9.70  0.0  8.85   14.49  20.98  74.35
+                           Coupon value ($) 55180  0.47  1.95  0.0  0.00    0.00   0.00  63.92
+                      Coupon redeemed (0/1) 55180  0.14  0.35  0.0  0.00    0.00   0.00   1.00
+                 Shopping trips in the week 55180  2.25  1.90  1.0  1.00    2.00   3.00  35.00
+
+Household-weeks: 55,180   households: 801   weeks: 102
+
+==============================================================================
+2. HOUSEHOLD CHARACTERISTICS (801 households)
+==============================================================================
+         Group       Category  Households  Share (%)
+   Income band      Under 15K          61        7.6
+   Income band         15-24K          74        9.2
+   Income band         25-34K          77        9.6
+   Income band         35-49K         172       21.5
+   Income band         50-74K         192       24.0
+   Income band         75-99K          96       12.0
+   Income band       100-124K          34        4.2
+   Income band       125-149K          38        4.7
+   Income band       150-174K          30        3.7
+   Income band       175-199K          11        1.4
+   Income band       200-249K           5        0.6
+   Income band          250K+          11        1.4
+Household size       1 person         255       31.8
+Household size      2 persons         318       39.7
+Household size     3+ persons         228       28.5
+      Children  Children (1+)         243       30.3
+      Children None / unknown         558       69.7
+
+==============================================================================
+3. MEANS BY HOUSEHOLD GROUP (household-week means)
+==============================================================================
+      Category          Group  Households  Household-weeks  Total spend ($)  Discretionary spend ($)  Discretionary share (%)  PromotionSavings, necessity ($)  Markdown depth (%)  Weeks with coupon (%)
+        < $35K         Income         212            14727            62.18                    12.19                    21.92                             8.76               18.01                  11.52
+       $35-74K         Income         364            25130            68.54                    12.93                    21.22                             8.83               16.77                  14.17
+         $75K+         Income         225            15323            89.92                    17.84                    20.69                             9.73               14.69                  16.34
+      1 person Household size         255            17964            64.04                    12.60                    21.14                             8.11               16.74                  12.43
+     2 persons Household size         318            21690            72.78                    13.82                    20.82                             8.91               16.10                  13.10
+    3+ persons Household size         228            15526            82.88                    16.21                    22.00                            10.36               16.37                  17.31
+ Children (1+)       Children         243            16548            82.59                    16.08                    21.90                            10.40               16.43                  17.20
+None / unknown       Children         558            38632            68.58                    13.25                    20.98                             8.49               16.34                  12.73
+
+==============================================================================
+4. SPENDING COMPOSITION (share of total merchandise spend)
+==============================================================================
+         Group  Households  Necessity (%)  Discretionary, main (%)  Neutral (%)  Discretionary, extended (%)
+All households         801           63.6                     19.4         12.5                          4.6
+ Income < $35K         212           64.1                     19.6         11.2                          5.0
+Income $35-74K         364           63.9                     18.9         12.8                          4.4
+  Income $75K+         225           62.8                     19.8         12.9                          4.4
+ Children (1+)         243           64.0                     19.5         12.2                          4.3
+None / unknown         558           63.4                     19.3         12.6                          4.7
+
+==============================================================================
+5. CORRELATIONS (pooled, household-week)
+==============================================================================
+             DiscSpend  DiscShare  NecSpend  Promo(nec)  Promo(all)  Promo(disc)  Coupon  TotalSpend
+DiscSpend         1.00       0.38      0.49        0.36        0.49         0.56    0.15        0.69
+DiscShare         0.38       1.00     -0.24       -0.19       -0.10         0.23   -0.04       -0.11
+NecSpend          0.49      -0.24      1.00        0.77        0.75         0.33    0.25        0.94
+Promo(nec)        0.36      -0.19      0.77        1.00        0.92         0.36    0.26        0.70
+Promo(all)        0.49      -0.10      0.75        0.92        1.00         0.62    0.30        0.75
+Promo(disc)       0.56       0.23      0.33        0.36        0.62         1.00    0.21        0.42
+Coupon            0.15      -0.04      0.25        0.26        0.30         0.21    1.00        0.25
+TotalSpend        0.69      -0.11      0.94        0.70        0.75         0.42    0.25        1.00
+
+==============================================================================
+6. HOW MUCH VARIATION IS WITHIN HOUSEHOLDS? (variance decomposition)
+==============================================================================
+                             Variable  Within-household share of variance (%)  Remaining after household and week effects (%)
+            DiscretionarySpending ($)                                    69.0                                            68.5
+               DiscretionaryShare (%)                                    82.6                                            82.1
+                NecessitySpending ($)                                    69.2                                            68.7
+PromotionSavings, necessity items ($)                                    75.0                                            74.2
+                     Coupon value ($)                                    80.5                                            79.8
+
+==============================================================================
+7. FIGURES
+==============================================================================
+Saved b3_fig_weekly.png and b3_fig_composition.png
+
+==============================================================================
+8. SAVE
+==============================================================================
+Saved b3_tables.xlsx and one CSV per table in part_b_output

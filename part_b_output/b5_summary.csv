@@ -1,0 +1,5 @@
+Variable group,Outcome type,Specifications,Positive & p<.05,Negative & p<.05,Not significant
+Savings (promo_nec / promo_all / markdown depth),levels / dollars,29,2,5,22
+Savings (promo_nec / promo_all / markdown depth),shares / pp,28,2,23,3
+Coupon (value / binary / winsorised),levels / dollars,29,20,0,9
+Coupon (value / binary / winsorised),shares / pp,28,21,0,7

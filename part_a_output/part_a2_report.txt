@@ -1,0 +1,164 @@
+
+==============================================================================
+A. IS sales_value NET OR GROSS OF retail_disc?  (shelf-price stability test)
+==============================================================================
+Product-store-weeks with mixed discounted / undiscounted lines: 1,732
+Median coefficient of variation, sales_value/quantity:            0.1933
+Median coefficient of variation, (sales_value+savings)/quantity:  0.0
+=> Adding savings back makes prices MORE stable: sales_value looks NET of retail_disc.
+   Shelf (pre-discount) value = sales_value + savings. Customer paid ~ sales_value.
+Always confirm against the dunnhumby data dictionary / user guide as well.
+
+==============================================================================
+B. POSITIVE retail_disc VALUES (sign assumption fails for some lines)
+==============================================================================
+Lines with retail_disc > 0: 36 (0.0014% of lines)
+Sum of positive retail_disc:  8.53
+Share of those lines with quantity <= 0: 0.833
+Share of those lines with sales_value == 0: 0.472
+
+By department (top 8):
+            size   sum
+department            
+GROCERY       18  2.71
+DRUG GM       10  1.04
+MEAT           3  0.00
+MEAT-PCKGD     3  3.99
+FLORAL         1  0.00
+PRODUCE        1  0.79
+
+Sample rows:
+ household_key department  quantity  sales_value  retail_disc  coupon_disc
+          1306    DRUG GM         0         0.01 1.000000e-02          0.0
+          1306    GROCERY         0         0.00 2.220446e-16          0.0
+          1321    DRUG GM         0         0.00 5.551115e-17          0.0
+          1321    DRUG GM         0         0.00 5.551115e-17          0.0
+            37    GROCERY         0         0.00 2.220446e-16          0.0
+          2241    GROCERY         0         0.00 2.220446e-16          0.0
+           923    GROCERY         0         0.00 1.110223e-16          0.0
+          1535 MEAT-PCKGD         1         7.98 3.990000e+00          0.0
+
+Treatment options: (i) floor savings at zero, (ii) keep as signed reversals,
+(iii) drop those lines. Report which one you used, and test sensitivity.
+
+==============================================================================
+C. LINES WITH quantity <= 0
+==============================================================================
+quantity == 0: 14,466   quantity < 0: 0
+Share of all lines: 0.0056
+sales_value on these lines:
+count    14466.00
+mean         0.00
+std          0.06
+min          0.00
+25%          0.00
+50%          0.00
+75%          0.00
+max          5.82
+Share of total sales_value on these lines: 0.0
+
+Top departments:
+            lines  sales
+department              
+             7839    0.0
+GROCERY      2572    3.0
+PRODUCE      1384   14.0
+DRUG GM      1341    1.0
+PASTRY        266    0.0
+MEAT-PCKGD    225    0.0
+MEAT          168    0.0
+DELI          164    1.0
+
+==============================================================================
+D. NON-MERCHANDISE / OUT-OF-SCOPE DEPARTMENTS (candidates to exclude)
+==============================================================================
+                 lines      sales   savings  sales_share  savings_share
+department                                                             
+KIOSK-GAS        22059  544222.28  17225.44       0.0675         0.0123
+MISC SALES TRAN   6050  119960.04   3035.69       0.0149         0.0022
+MISC. TRANS.      2351   10678.69    322.80       0.0013         0.0002
+COUP/STR & MFG     817    1027.72    222.43       0.0001         0.0002
+GM MERCH EXP        49     101.10      2.97       0.0000         0.0000
+CHARITABLE CONT      2       7.74      2.24       0.0000         0.0000
+POSTAL CENTER       20      24.01      0.39       0.0000         0.0000
+CNTRL/STORE SUP     21      49.05      0.00       0.0000         0.0000
+PHOTO               17      41.40      8.66       0.0000         0.0000
+VIDEO                3      34.77      0.00       0.0000         0.0000
+VIDEO RENTAL         5      21.46     12.94       0.0000         0.0000
+TRAVEL & LEISUR    862    2550.38    244.31       0.0003         0.0002
+AUTOMOTIVE          65     452.66      0.00       0.0001         0.0000
+RX                  14     159.56      0.00       0.0000         0.0000
+PHARMACY SUPPLY      6      16.92      3.00       0.0000         0.0000
+PROD-WHS SALES       4       7.52      0.00       0.0000         0.0000
+RESTAURANT         465    1986.76     52.75       0.0002         0.0000
+GARDEN CENTER      720    7667.82   1032.10       0.0010         0.0007
+FLORAL            4524   39653.34   1120.14       0.0049         0.0008
+                  7839       0.00      0.00       0.0000         0.0000
+
+Combined share of sales_value in these departments: 0.0904
+Combined share of retail savings in these departments: 0.0167
+
+KIOSK-GAS commodities:
+commodity_desc
+COUPON/MISC ITEMS    514686.0
+FUEL                  29537.0
+
+Fuel is neither necessity nor discretionary in your framework. If it stays in total spend,
+it contaminates the DiscretionaryShare denominator. Recommended: merchandise-only total.
+
+==============================================================================
+E. IS THE DEMOGRAPHIC SUBSET (801 hh) DIFFERENT FROM THE OTHER 1,699?
+==============================================================================
+          variable  with_demographics  without  std_diff
+      active_weeks              70.52    39.72      1.54
+           baskets             175.20    80.13      0.84
+ mean_weekly_spend              77.05    47.09      0.83
+   mean_disc_share              18.93    21.21     -0.24
+    mean_promo_nec              10.73     6.90      0.68
+share_weeks_coupon               0.16     0.07      0.62
+
+Rule of thumb: |std_diff| > 0.25 suggests a meaningfully different group.
+
+==============================================================================
+F. ACTIVITY FILTER: visits vs active weeks, entry/exit pattern
+==============================================================================
+Households with >= 10 baskets but < 10 active weeks: 36
+Households with >=  5 active weeks: all= 2464   with demographics= 801
+Households with >= 10 active weeks: all= 2366   with demographics= 801
+Households with >= 20 active weeks: all= 2133   with demographics= 801
+Households with >= 26 active weeks: all= 1957   with demographics= 796
+Households with >= 52 active weeks: all= 1201   with demographics= 689
+
+Median share of weeks active within own first-to-last-week span: 0.551
+Share of households whose first purchase is after week 10: 0.505
+Share of households whose last purchase is before week 93: 0.091
+(High fill within span => zero-filling inside the span is defensible as a robustness check;
+ low fill => households shop sporadically and missing weeks may be real non-shopping.)
+
+==============================================================================
+G. DEMOGRAPHIC RECODES
+==============================================================================
+Unmapped income bands: 0   unmapped household sizes: 0
+has_kids (1 = 1, 2 or 3+ children; 0 = None/Unknown):
+has_kids
+0    558
+1    243
+
+NOTE: 'None/Unknown' mixes households with no children and households whose status is
+unknown, so has_kids = 0 is contaminated. State this as a limitation.
+NOTE: household size '5+' is top-coded at 5; income midpoints are an assumption (250K+ -> 275K).
+
+==============================================================================
+H. COUPON SPARSENESS AND WITHIN-HOUSEHOLD VARIATION (demographic subset)
+==============================================================================
+Household-weeks: 56,488  households: 801
+Share of household-weeks with any coupon: 0.163
+Households with >= 1 coupon week: 748   >= 3 coupon weeks: 612   >= 10 coupon weeks: 316
+
+Within-household share of total variance (higher = more variation FE can use):
+  disc_spend   within/total variance = 0.707
+  disc_share   within/total variance = 0.826
+  total_spend  within/total variance = 0.639
+  promo_nec    within/total variance = 0.747
+  promo_all    within/total variance = 0.729
+  coupon       within/total variance = 0.826

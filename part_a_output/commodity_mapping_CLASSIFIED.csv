@@ -1,0 +1,361 @@
+department,commodity_desc,sales_value,category,group,disc_tier,rationale,narrow_disc,main_disc,broad_disc
+KIOSK-GAS,COUPON/MISC ITEMS,514685.72,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+GROCERY,SOFT DRINKS,327647.3,Discretionary,sugary_drinks,core,"Soft drinks: sugary indulgence beverage, not required for hydration.",1,1,1
+MEAT,BEEF,312103.22,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+GROCERY,FLUID MILK PRODUCTS,205356.05,Necessity,dairy_eggs,,Staple dairy and eggs.,0,0,0
+GROCERY,CHEESE,189528.18,Necessity,dairy_eggs,,Staple dairy and eggs.,0,0,0
+GROCERY,FRZN MEAT/MEAT DINNERS,160517.17,Necessity,prepared_meals,,Ready or convenience meals: a meal is a basic need even when convenience-priced.,0,0,0
+GROCERY,BAG SNACKS,148375.16,Discretionary,salty_snacks,core,Bagged salty snacks: indulgence food with no basic-needs role.,1,1,1
+GROCERY,BEERS/ALES,147309.68,Discretionary,alcohol,core,Alcoholic drinks: classic indulgence/vice good.,1,1,1
+GROCERY,FROZEN PIZZA,146037.25,Necessity,prepared_meals,,Ready or convenience meals: a meal is a basic need even when convenience-priced.,0,0,0
+GROCERY,BAKED BREAD/BUNS/ROLLS,145930.85,Necessity,bakery_staples,,Bread and basic bakery staples.,0,0,0
+MISC SALES TRAN,COUPON/MISC ITEMS,119960.04,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+GROCERY,COLD CEREAL,111702.42,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+DELI,DELI MEATS,106539.94,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+DRUG GM,CIGARETTES,96387.83,Discretionary,tobacco,extended,Tobacco: vice/habit good that is forgone without compromising basic needs.,0,0,1
+MEAT,CHICKEN,94342.85,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+MEAT-PCKGD,LUNCHMEAT,93064.24,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+MEAT,PORK,90263.36,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+GROCERY,SOUP,86239.69,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+GROCERY,ICE CREAM/MILK/SHERBTS,82426.6,Discretionary,frozen_desserts,core,"Ice cream, frozen novelties and frozen desserts.",1,1,1
+DRUG GM,CANDY - PACKAGED,75868.82,Discretionary,confectionery,core,"Sweets and candy: eaten for pleasure, forgone without affecting nutrition.",1,1,1
+GROCERY,CANNED JUICES,74735.18000000001,Neutral,other_beverages,,Habit or convenience beverages that are neither basic need nor clear indulgence.,0,0,0
+GROCERY,REFRGRATD JUICES/DRNKS,72179.2,Neutral,other_beverages,,Habit or convenience beverages that are neither basic need nor clear indulgence.,0,0,0
+MEAT-PCKGD,MEAT - MISC,65837.6,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+GROCERY,COFFEE,64555.48,Neutral,other_beverages,,Habit or convenience beverages that are neither basic need nor clear indulgence.,0,0,0
+GROCERY,CRACKERS/MISC BKD FD,64528.56,Discretionary,snacks_other,extended,"Snack-type items whose content is mixed or borderline (crackers, nuts, popcorn, snack bars).",0,1,1
+GROCERY,WATER - CARBONATED/FLVRD DRINK,63873.1,Neutral,other_beverages,,Habit or convenience beverages that are neither basic need nor clear indulgence.,0,0,0
+GROCERY,DOMESTIC WINE,61592.29,Discretionary,alcohol,core,Alcoholic drinks: classic indulgence/vice good.,1,1,1
+GROCERY,BATH TISSUES,60620.23,Necessity,household_consumables,,Cleaning and paper consumables needed to run a household.,0,0,0
+DRUG GM,DIAPERS & DISPOSABLES,59663.7,Necessity,infant,,Infant feeding and care.,0,0,0
+GROCERY,YOGURT,59341.22,Necessity,dairy_eggs,,Staple dairy and eggs.,0,0,0
+GROCERY,VEGETABLES - SHELF STABLE,57690.05,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+GROCERY,BAKED SWEET GOODS,55091.48,Discretionary,sweet_bakery,core,"Cakes, cookies, pies and sweet pastry: treat foods.",1,1,1
+GROCERY,LAUNDRY DETERGENTS,55070.25,Necessity,household_consumables,,Cleaning and paper consumables needed to run a household.,0,0,0
+GROCERY,CONVENIENT BRKFST/WHLSM SNACKS,55069.31,Discretionary,snacks_other,extended,"Snack-type items whose content is mixed or borderline (crackers, nuts, popcorn, snack bars).",0,1,1
+GROCERY,COOKIES/CONES,54680.96,Discretionary,sweet_bakery,core,"Cakes, cookies, pies and sweet pastry: treat foods.",1,1,1
+GROCERY,MEAT - SHELF STABLE,53608.08,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+GROCERY,DOG FOODS,53410.97,Neutral,pet,,"Pet food and supplies: forgoable by the household but a duty to the animal, not an indulgence.",0,0,0
+DELI,CHEESES,52299.0,Necessity,dairy_eggs,,Staple dairy and eggs.,0,0,0
+MEAT-PCKGD,FROZEN MEAT,50911.02,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+DRUG GM,INFANT FORMULA,50861.79,Necessity,infant,,Infant feeding and care.,0,0,0
+SEAFOOD-PCKGD,SEAFOOD - FROZEN,50560.98,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+GROCERY,HISPANIC,47899.9,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+GROCERY,SALD DRSNG/SNDWCH SPRD,47585.87,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+GROCERY,DINNER MXS:DRY,47209.58,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+MEAT-PCKGD,BREAKFAST SAUSAGE/SANDWICHES,46085.22,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+MEAT-PCKGD,BACON,45436.41,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+PRODUCE,POTATOES,45169.62,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+GROCERY,CONDIMENTS/SAUCES,44856.14,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+DRUG GM,HAIR CARE PRODUCTS,44840.52,Necessity,personal_hygiene,,Basic personal hygiene and grooming.,0,0,0
+PRODUCE,SALAD MIX,44807.03,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+GROCERY,REFRGRATD DOUGH PRODUCTS,43477.13,Neutral,baking_misc_food,,"Optional or mixed-use food items (baking inputs, party trays, dough, croutons).",0,0,0
+GROCERY,FRZN VEGETABLE/VEG DSH,43410.18,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+MEAT-PCKGD,DINNER SAUSAGE,42889.2,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+GROCERY,FD WRAPS/BAGS/TRSH BG,42796.19,Necessity,household_consumables,,Cleaning and paper consumables needed to run a household.,0,0,0
+PRODUCE,TOMATOES,41861.79,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+GROCERY,MILK BY-PRODUCTS,41749.4,Necessity,dairy_eggs,,Staple dairy and eggs.,0,0,0
+GROCERY,FRUIT - SHELF STABLE,40925.53,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+PRODUCE,TROPICAL FRUIT,40551.23,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+GROCERY,FRZN NOVELTIES/WTR ICE,40330.18,Discretionary,frozen_desserts,core,"Ice cream, frozen novelties and frozen desserts.",1,1,1
+GROCERY,EGGS,39928.17,Necessity,dairy_eggs,,Staple dairy and eggs.,0,0,0
+GROCERY,HOUSEHOLD CLEANG NEEDS,39364.61,Necessity,household_consumables,,Cleaning and paper consumables needed to run a household.,0,0,0
+PASTRY,CAKES,38690.65,Discretionary,sweet_bakery,core,"Cakes, cookies, pies and sweet pastry: treat foods.",1,1,1
+GROCERY,DRY BN/VEG/POTATO/RICE,37524.22,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+DRUG GM,ORAL HYGIENE PRODUCTS,36423.45,Necessity,personal_hygiene,,Basic personal hygiene and grooming.,0,0,0
+PRODUCE,APPLES,36160.75,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+PRODUCE,BERRIES,34142.310000000005,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+PRODUCE,GRAPES,34038.69,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+GROCERY,PASTA SAUCE,33993.4,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+MEAT-PCKGD,HOT DOGS,33983.23,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+GROCERY,CAT FOOD,33590.68,Neutral,pet,,"Pet food and supplies: forgoable by the household but a duty to the animal, not an indulgence.",0,0,0
+DRUG GM,GREETING CARDS/WRAP/PARTY SPLY,33396.590000000004,Discretionary,seasonal_gifts_floral,extended,"Gifts, celebration, seasonal and floral goods.",0,0,1
+PRODUCE,VEGETABLES - ALL OTHERS,33137.56,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+DRUG GM,MAGAZINE,32785.65,Discretionary,media,core,Magazines (proposal lists magazines).,1,1,1
+DELI,CHICKEN/POULTRY,32295.98,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+GROCERY,PNT BTR/JELLY/JAMS,32167.93,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+GROCERY,BAKING MIXES,31079.76,Neutral,baking_misc_food,,"Optional or mixed-use food items (baking inputs, party trays, dough, croutons).",0,0,0
+SALAD BAR,SALAD BAR,30878.83,Necessity,prepared_meals,,Ready or convenience meals: a meal is a basic need even when convenience-priced.,0,0,0
+GROCERY,BAKING NEEDS,30533.71,Neutral,baking_misc_food,,"Optional or mixed-use food items (baking inputs, party trays, dough, croutons).",0,0,0
+GROCERY,PAPER TOWELS,30254.54,Necessity,household_consumables,,Cleaning and paper consumables needed to run a household.,0,0,0
+KIOSK-GAS,FUEL,29536.56,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+MEAT-PCKGD,HEAT/SERVE,28240.17,Necessity,prepared_meals,,Ready or convenience meals: a meal is a basic need even when convenience-priced.,0,0,0
+GROCERY,SPICES & EXTRACTS,28220.11,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+DRUG GM,CANDY - CHECKLANE,28116.66,Discretionary,confectionery,core,"Sweets and candy: eaten for pleasure, forgone without affecting nutrition.",1,1,1
+GROCERY,SHORTENING/OIL,28097.65,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+GROCERY,SUGARS/SWEETNERS,27505.62,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+MEAT,SMOKED MEATS,27126.22,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+DRUG GM,COLD AND FLU,25642.44,Necessity,health_otc,,Over-the-counter health and medical needs.,0,0,0
+DRUG GM,ANALGESICS,25426.21,Necessity,health_otc,,Over-the-counter health and medical needs.,0,0,0
+NUTRITION,REFRIGERATED,25323.02,Neutral,wellness_beauty,,"Health-food section, supplements and skin/hair items: not basic needs, not clearly indulgent.",0,0,0
+GROCERY,SEAFOOD - SHELF STABLE,24991.74,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+GROCERY,PAPER HOUSEWARES,24952.22,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+GROCERY,FRZN BREAKFAST FOODS,24927.7,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+GROCERY,ISOTONIC DRINKS,24753.33,Discretionary,sugary_drinks_other,extended,"Sweetened drink mixes and sports drinks: similar to soft drinks, but less clear-cut.",0,0,1
+DELI,SALADS/DIPS,24600.99,Necessity,prepared_meals,,Ready or convenience meals: a meal is a basic need even when convenience-priced.,0,0,0
+PRODUCE,CITRUS,24527.9,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+DRUG GM,BABY FOODS,24073.6,Necessity,infant,,Infant feeding and care.,0,0,0
+PRODUCE,ONIONS,23771.86,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+COSMETICS,MAKEUP AND TREATMENT,23513.81,Discretionary,personal_indulgence,core,"Cosmetics, fragrance and bath/beauty products (proposal lists cosmetics).",1,1,1
+GROCERY,DRY NOODLES/PASTA,23361.48,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+GROCERY,MARGARINES,23123.26,Necessity,dairy_eggs,,Staple dairy and eggs.,0,0,0
+GROCERY,MISC. DAIRY,22931.53,Necessity,dairy_eggs,,Staple dairy and eggs.,0,0,0
+DRUG GM,SHAVING CARE PRODUCTS,22928.57,Necessity,personal_hygiene,,Basic personal hygiene and grooming.,0,0,0
+DELI,PREPARED FOOD,21906.44,Necessity,prepared_meals,,Ready or convenience meals: a meal is a basic need even when convenience-priced.,0,0,0
+DRUG GM,SOAP - LIQUID & BAR,21681.52,Necessity,personal_hygiene,,Basic personal hygiene and grooming.,0,0,0
+SPIRITS,LIQUOR,21670.88,Discretionary,alcohol,core,Alcoholic drinks: classic indulgence/vice good.,1,1,1
+DRUG GM,PREPAID WIRELESS&ACCESSORIES,21644.47,Exclude,nonmerchandise_commodity,,"Fuel, coupon/misc line, deposit, prepaid card, ticket, service or store supply (fails the scope test).",0,0,0
+GROCERY,FRZN POTATOES,21579.3,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+GROCERY,IMPORTED WINE,21498.68,Discretionary,alcohol,core,Alcoholic drinks: classic indulgence/vice good.,1,1,1
+MEAT,TURKEY,21258.67,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+DRUG GM,HAND/BODY/FACIAL PRODUCTS,20891.14,Neutral,wellness_beauty,,"Health-food section, supplements and skin/hair items: not basic needs, not clearly indulgent.",0,0,0
+GROCERY,FROZEN PIE/DESSERTS,20835.32,Discretionary,frozen_desserts,core,"Ice cream, frozen novelties and frozen desserts.",1,1,1
+GROCERY,LAUNDRY ADDITIVES,20265.74,Necessity,household_consumables,,Cleaning and paper consumables needed to run a household.,0,0,0
+DRUG GM,FEMININE HYGIENE,20060.81,Necessity,personal_hygiene,,Basic personal hygiene and grooming.,0,0,0
+SEAFOOD,SEAFOOD-FRESH,19838.78,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+FLORAL,FLORAL-FRESH CUT,19784.57,Discretionary,seasonal_gifts_floral,extended,"Gifts, celebration, seasonal and floral goods.",0,0,1
+DRUG GM,VITAMINS,19737.03,Neutral,wellness_beauty,,"Health-food section, supplements and skin/hair items: not basic needs, not clearly indulgent.",0,0,0
+PASTRY,BREAKFAST SWEETS,19664.37,Discretionary,sweet_bakery,core,"Cakes, cookies, pies and sweet pastry: treat foods.",1,1,1
+GROCERY,FROZEN BREAD/DOUGH,19355.17,Necessity,bakery_staples,,Bread and basic bakery staples.,0,0,0
+PRODUCE,VALUE ADDED FRUIT,19009.01,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+GROCERY,DISHWASH DETERGENTS,18891.59,Necessity,household_consumables,,Cleaning and paper consumables needed to run a household.,0,0,0
+GROCERY,FACIAL TISS/DNR NAPKIN,18828.93,Necessity,household_consumables,,Cleaning and paper consumables needed to run a household.,0,0,0
+DRUG GM,STATIONERY & SCHOOL SUPPLIES,18305.26,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+GROCERY,BEANS - CANNED GLASS & MW,18005.33,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+GROCERY,AIR CARE,17699.31,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+PASTRY,BREAD,17484.420000000002,Necessity,bakery_staples,,Bread and basic bakery staples.,0,0,0
+GROCERY,SNACK NUTS,17325.82,Discretionary,snacks_other,extended,"Snack-type items whose content is mixed or borderline (crackers, nuts, popcorn, snack bars).",0,1,1
+GROCERY,HOT CEREAL,17172.94,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+PRODUCE,ORGANICS FRUIT & VEGETABLES,17053.87,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+GROCERY,CAT LITTER,17048.3,Neutral,pet,,"Pet food and supplies: forgoable by the household but a duty to the animal, not an indulgence.",0,0,0
+GROCERY,BUTTER,16887.94,Necessity,dairy_eggs,,Staple dairy and eggs.,0,0,0
+PRODUCE,STONE FRUIT,16629.0,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+GROCERY,PWDR/CRYSTL DRNK MX,16366.2,Discretionary,sugary_drinks_other,extended,"Sweetened drink mixes and sports drinks: similar to soft drinks, but less clear-cut.",0,0,1
+DRUG GM,DIETARY AID PRODUCTS,16339.93,Neutral,wellness_beauty,,"Health-food section, supplements and skin/hair items: not basic needs, not clearly indulgent.",0,0,0
+PRODUCE,PEPPERS-ALL,16150.66,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+DRUG GM,DEODORANTS,15897.12,Necessity,personal_hygiene,,Basic personal hygiene and grooming.,0,0,0
+PRODUCE,CARROTS,15866.42,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+GROCERY,WAREHOUSE SNACKS,15848.49,Discretionary,snacks_other,extended,"Snack-type items whose content is mixed or borderline (crackers, nuts, popcorn, snack bars).",0,1,1
+DRUG GM,BABY HBC,15706.91,Necessity,infant,,Infant feeding and care.,0,0,0
+DRUG GM,BOOKSTORE,15683.83,Discretionary,media_leisure,extended,"Leisure, entertainment and hobby goods.",0,0,1
+PRODUCE,PROCESSED,15597.79,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+GROCERY,PICKLE/RELISH/PKLD VEG,15569.83,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+PASTRY,COOKIES,15203.03,Discretionary,sweet_bakery,core,"Cakes, cookies, pies and sweet pastry: treat foods.",1,1,1
+DRUG GM,SPRING/SUMMER SEASONAL,15043.96,Discretionary,seasonal_gifts_floral,extended,"Gifts, celebration, seasonal and floral goods.",0,0,1
+PRODUCE,MELONS,14194.82,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+PRODUCE,VEGETABLES SALAD,14032.88,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+DRUG GM,AUDIO/VIDEO PRODUCTS,13669.86,Discretionary,media_leisure,extended,"Leisure, entertainment and hobby goods.",0,0,1
+GROCERY,MOLASSES/SYRUP/PANCAKE MIXS,13504.34,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+DRUG GM,BATTERIES,13169.63,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+PASTRY,PIES,12894.57,Discretionary,sweet_bakery,core,"Cakes, cookies, pies and sweet pastry: treat foods.",1,1,1
+GROCERY,PET CARE SUPPLIES,12886.64,Neutral,pet,,"Pet food and supplies: forgoable by the household but a duty to the animal, not an indulgence.",0,0,0
+GROCERY,DRY SAUCES/GRAVY,12742.94,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+PRODUCE,POPCORN,12526.65,Discretionary,snacks_other,extended,"Snack-type items whose content is mixed or borderline (crackers, nuts, popcorn, snack bars).",0,1,1
+DRUG GM,SINUS AND ALLERGY,12359.57,Necessity,health_otc,,Over-the-counter health and medical needs.,0,0,0
+DRUG GM,FIRST AID PRODUCTS,11949.07,Necessity,health_otc,,Over-the-counter health and medical needs.,0,0,0
+PRODUCE,MUSHROOMS,11874.02,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+GROCERY,DRY MIX DESSERTS,11791.03,Discretionary,sweet_dessert_mix,extended,Dry dessert mixes: dessert-oriented but also a pantry item.,0,0,1
+DRUG GM,CHARCOAL AND LIGHTER FLUID,11693.63,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+GROCERY,TEAS,11625.35,Neutral,other_beverages,,Habit or convenience beverages that are neither basic need nor clear indulgence.,0,0,0
+DRUG GM,ANTACIDS,11508.76,Necessity,health_otc,,Over-the-counter health and medical needs.,0,0,0
+DRUG GM,CHRISTMAS  SEASONAL,11112.27,Discretionary,seasonal_gifts_floral,extended,"Gifts, celebration, seasonal and floral goods.",0,0,1
+DRUG GM,TOYS AND GAMES,10878.62,Discretionary,media_leisure,extended,"Leisure, entertainment and hobby goods.",0,0,1
+NUTRITION,FROZEN,10721.33,Neutral,wellness_beauty,,"Health-food section, supplements and skin/hair items: not basic needs, not clearly indulgent.",0,0,0
+MISC. TRANS.,NO COMMODITY DESCRIPTION,10678.69,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+DRUG GM,ELECTRICAL SUPPPLIES,10534.93,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+PASTRY,ROLLS,10401.59,Necessity,bakery_staples,,Bread and basic bakery staples.,0,0,0
+DRUG GM,BROOMS AND MOPS,10249.79,Necessity,household_consumables,,Cleaning and paper consumables needed to run a household.,0,0,0
+PRODUCE,BROCCOLI/CAULIFLOWER,10011.03,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+GROCERY,COCOA MIXES,9778.94,Discretionary,sugary_drinks_other,extended,"Sweetened drink mixes and sports drinks: similar to soft drinks, but less clear-cut.",0,0,1
+GROCERY,BLEACH,9671.29,Necessity,household_consumables,,Cleaning and paper consumables needed to run a household.,0,0,0
+NUTRITION,DRIED FRUIT,9548.08,Neutral,wellness_beauty,,"Health-food section, supplements and skin/hair items: not basic needs, not clearly indulgent.",0,0,0
+GROCERY,MISC WINE,9453.74,Discretionary,alcohol,core,Alcoholic drinks: classic indulgence/vice good.,1,1,1
+SEAFOOD,SEAFOOD - FROZEN,9439.76,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+NUTRITION,FITNESS&DIET,9335.2,Neutral,wellness_beauty,,"Health-food section, supplements and skin/hair items: not basic needs, not clearly indulgent.",0,0,0
+PRODUCE,NUTS,9030.48,Neutral,wellness_beauty,,"Health-food section, supplements and skin/hair items: not basic needs, not clearly indulgent.",0,0,0
+DRUG GM,LAXATIVES,8913.64,Necessity,health_otc,,Over-the-counter health and medical needs.,0,0,0
+DRUG GM,PLASTIC HOUSEWARES,8512.03,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+DRUG GM,TICKETS,8243.08,Exclude,nonmerchandise_commodity,,"Fuel, coupon/misc line, deposit, prepaid card, ticket, service or store supply (fails the scope test).",0,0,0
+DRUG GM,IN-STORE PHOTOFINISHING,8052.64,Exclude,nonmerchandise_commodity,,"Fuel, coupon/misc line, deposit, prepaid card, ticket, service or store supply (fails the scope test).",0,0,0
+PRODUCE,VALUE ADDED VEGETABLES,7664.37,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+FLORAL,ROSES,7425.27,Discretionary,seasonal_gifts_floral,extended,"Gifts, celebration, seasonal and floral goods.",0,0,1
+DRUG GM,EYE AND EAR CARE PRODUCTS,7417.76,Necessity,health_otc,,Over-the-counter health and medical needs.,0,0,0
+DRUG GM,KITCHEN GADGETS,7297.43,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+DRUG GM,FILM AND CAMERA PRODUCTS,7216.8,Discretionary,media_leisure,extended,"Leisure, entertainment and hobby goods.",0,0,1
+GARDEN CENTER,GARDEN CENTER,7164.66,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+NUTRITION,CEREAL/BREAKFAST,7022.84,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+DRUG GM,COOKWARE & BAKEWARE,6707.57,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+DELI,PARTY TRAYS,6698.49,Neutral,baking_misc_food,,"Optional or mixed-use food items (baking inputs, party trays, dough, croutons).",0,0,0
+GROCERY,FRZN ICE,6576.25,Neutral,baking_misc_food,,"Optional or mixed-use food items (baking inputs, party trays, dough, croutons).",0,0,0
+DRUG GM,INFANT CARE PRODUCTS,6389.78,Necessity,infant,,Infant feeding and care.,0,0,0
+MEAT-PCKGD,MISCELLANEOUS,5976.6900000000005,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+DRUG GM,CANDLES/ACCESSORIES,5926.88,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+DRUG GM,NEWSPAPER,5911.7,Discretionary,media_leisure,extended,"Leisure, entertainment and hobby goods.",0,0,1
+GROCERY,OLIVES,5888.06,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+NUTRITION,CHIPS&SNACKS,5840.83,Discretionary,snacks_other,extended,"Snack-type items whose content is mixed or borderline (crackers, nuts, popcorn, snack bars).",0,1,1
+GROCERY,FRZN FRUITS,5726.35,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+GROCERY,FRZN JCE CONC/DRNKS,5724.51,Neutral,other_beverages,,Habit or convenience beverages that are neither basic need nor clear indulgence.,0,0,0
+GROCERY,FLOUR & MEALS,5723.6,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+SEAFOOD-PCKGD,FROZEN - BOXED(GROCERY),5653.2,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+PRODUCE,CORN,5435.38,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+PASTRY,SWEET GOODS & SNACKS,5300.05,Discretionary,sweet_bakery,core,"Cakes, cookies, pies and sweet pastry: treat foods.",1,1,1
+DRUG GM,HARDWARE SUPPLIES,5207.57,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+DELI,SUSHI,5162.85,Necessity,prepared_meals,,Ready or convenience meals: a meal is a basic need even when convenience-priced.,0,0,0
+DRUG GM,ADULT INCONTINENCE,4995.97,Necessity,personal_hygiene,,Basic personal hygiene and grooming.,0,0,0
+DRUG GM,FAMILY PLANNING,4853.49,Necessity,personal_hygiene,,Basic personal hygiene and grooming.,0,0,0
+PRODUCE,HERBS,4668.7300000000005,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+DELI,SANDWICHES,4665.25,Necessity,prepared_meals,,Ready or convenience meals: a meal is a basic need even when convenience-priced.,0,0,0
+GROCERY,COUPON/MISC ITEMS,4564.33,Exclude,nonmerchandise_commodity,,"Fuel, coupon/misc line, deposit, prepaid card, ticket, service or store supply (fails the scope test).",0,0,0
+COSMETICS,BATH,4532.35,Discretionary,personal_indulgence,core,"Cosmetics, fragrance and bath/beauty products (proposal lists cosmetics).",1,1,1
+PRODUCE,PEARS,4519.17,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+DRUG GM,COFFEE FILTERS,4502.8,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+SEAFOOD-PCKGD,SEAFOOD-FRESH,4496.78,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+FLORAL,FLORAL-FLOWERING PLANTS,4490.84,Discretionary,seasonal_gifts_floral,extended,"Gifts, celebration, seasonal and floral goods.",0,0,1
+DRUG GM,HAIR CARE ACCESSORIES,4345.320000000001,Neutral,wellness_beauty,,"Health-food section, supplements and skin/hair items: not basic needs, not clearly indulgent.",0,0,0
+GROCERY,FROZEN CHICKEN,4201.64,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+DELI,SNACKS,4178.150000000001,Discretionary,snacks_other,extended,"Snack-type items whose content is mixed or borderline (crackers, nuts, popcorn, snack bars).",0,1,1
+DRUG GM,DOMESTIC GOODS,3988.52,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+NUTRITION,WATER,3904.39,Neutral,other_beverages,,Habit or convenience beverages that are neither basic need nor clear indulgence.,0,0,0
+NUTRITION,JUICE,3854.33,Neutral,other_beverages,,Habit or convenience beverages that are neither basic need nor clear indulgence.,0,0,0
+DRUG GM,HALLOWEEN,3847.39,Discretionary,seasonal_gifts_floral,extended,"Gifts, celebration, seasonal and floral goods.",0,0,1
+DRUG GM,FOOT CARE PRODUCTS,3828.9,Necessity,personal_hygiene,,Basic personal hygiene and grooming.,0,0,0
+GROCERY,CANNED MILK,3783.82,Necessity,dairy_eggs,,Staple dairy and eggs.,0,0,0
+DRUG GM,HOSIERY/SOCKS,3755.53,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+DRUG GM,AUTOMOTIVE PRODUCTS,3716.85,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+NUTRITION,SNKS/CKYS/CRKR/CNDY,3702.18,Discretionary,snacks_other,extended,"Snack-type items whose content is mixed or borderline (crackers, nuts, popcorn, snack bars).",0,1,1
+NUTRITION,RICE CAKES,3610.61,Neutral,wellness_beauty,,"Health-food section, supplements and skin/hair items: not basic needs, not clearly indulgent.",0,0,0
+DRUG GM,DISPOSIBLE FOILWARE,3574.7000000000003,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+DRUG GM,APPAREL,3551.72,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+DRUG GM,TOBACCO OTHER,3547.93,Discretionary,tobacco,extended,Tobacco: vice/habit good that is forgone without compromising basic needs.,0,0,1
+DRUG GM,INSECTICIDES,3482.69,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+PRODUCE,SQUASH,3374.94,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+DRUG GM,IRONING AND CHEMICALS,3346.01,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+DRUG GM,LAWN AND GARDEN SHOP,3187.55,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+DRUG GM,J-HOOKS,3167.2200000000003,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+DRUG GM,SMOKING CESSATIONS,3030.67,Necessity,health_otc,,Over-the-counter health and medical needs.,0,0,0
+DRUG GM,SUNTAN,3025.99,Neutral,wellness_beauty,,"Health-food section, supplements and skin/hair items: not basic needs, not clearly indulgent.",0,0,0
+NUTRITION,PREPARED/PKGD FOODS,2862.35,Neutral,wellness_beauty,,"Health-food section, supplements and skin/hair items: not basic needs, not clearly indulgent.",0,0,0
+FLORAL,FLORAL-FOLIAGE PLANTS,2769.45,Discretionary,seasonal_gifts_floral,extended,"Gifts, celebration, seasonal and floral goods.",0,0,1
+GROCERY,SYRUPS/TOPPINGS,2707.93,Neutral,baking_misc_food,,"Optional or mixed-use food items (baking inputs, party trays, dough, croutons).",0,0,0
+TRAVEL & LEISUR,APPLES,2537.26,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+COSMETICS,FRAGRANCES,2535.61,Discretionary,personal_indulgence,core,"Cosmetics, fragrance and bath/beauty products (proposal lists cosmetics).",1,1,1
+SEAFOOD-PCKGD,SEAFOOD - MISC,2354.74,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+CHEF SHOPPE,UNKNOWN,2290.8,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+DRUG GM,PERSONAL CARE APPLIANCES,2234.34,Neutral,wellness_beauty,,"Health-food section, supplements and skin/hair items: not basic needs, not clearly indulgent.",0,0,0
+DRUG GM,FALL AND WINTER SEASONAL,2194.27,Discretionary,seasonal_gifts_floral,extended,"Gifts, celebration, seasonal and floral goods.",0,0,1
+GROCERY,LIQUOR,2149.65,Discretionary,alcohol,core,Alcoholic drinks: classic indulgence/vice good.,1,1,1
+FLORAL,FLORAL BALLOONS,2090.16,Discretionary,seasonal_gifts_floral,extended,"Gifts, celebration, seasonal and floral goods.",0,0,1
+NUTRITION,NON-DAIRY BEVERAGES,2073.58,Neutral,other_beverages,,Habit or convenience beverages that are neither basic need nor clear indulgence.,0,0,0
+DRUG GM,VALENTINE,2053.24,Discretionary,seasonal_gifts_floral,extended,"Gifts, celebration, seasonal and floral goods.",0,0,1
+DRUG GM,SPORTS MEMORABLILIA,2013.98,Discretionary,media_leisure,extended,"Leisure, entertainment and hobby goods.",0,0,1
+DRUG GM,OVERNIGHT PHOTOFINISHING,1937.3,Exclude,nonmerchandise_commodity,,"Fuel, coupon/misc line, deposit, prepaid card, ticket, service or store supply (fails the scope test).",0,0,0
+DRUG GM,EASTER,1913.74,Discretionary,seasonal_gifts_floral,extended,"Gifts, celebration, seasonal and floral goods.",0,0,1
+GROCERY,NEW AGE,1794.4,Neutral,wellness_beauty,,"Health-food section, supplements and skin/hair items: not basic needs, not clearly indulgent.",0,0,0
+DRUG GM,PORTABLE ELECTRIC APPLIANCES,1778.02,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+FLORAL,FLORAL- HARD GOODS,1773.16,Discretionary,seasonal_gifts_floral,extended,"Gifts, celebration, seasonal and floral goods.",0,0,1
+NUTRITION,CONDIMENTS,1630.41,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+NUTRITION,SOUP,1560.25,Necessity,pantry_staples,,"Staple shelf-stable and frozen foods, cooking inputs and breakfast basics.",0,0,0
+DRUG GM,HOME FURNISHINGS,1554.08,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+PRODUCE,SEASONAL,1541.26,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+NUTRITION,BAKING,1526.35,Neutral,baking_misc_food,,"Optional or mixed-use food items (baking inputs, party trays, dough, croutons).",0,0,0
+COSMETICS,COSMETIC ACCESSORIES,1465.36,Discretionary,personal_indulgence,core,"Cosmetics, fragrance and bath/beauty products (proposal lists cosmetics).",1,1,1
+MEAT,EXOTIC GAME/FOWL,1387.16,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+DELI,DELI SPECIALTIES (RETAIL PK),1321.78,Necessity,prepared_meals,,Ready or convenience meals: a meal is a basic need even when convenience-priced.,0,0,0
+DRUG GM,FIREWORKS,1317.88,Discretionary,seasonal_gifts_floral,extended,"Gifts, celebration, seasonal and floral goods.",0,0,1
+MEAT,LAMB,1307.43,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+DRUG GM,PROPANE,1300.9299999999998,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+DRUG GM,GLASSES/VISION AIDS,1276.18,Necessity,health_otc,,Over-the-counter health and medical needs.,0,0,0
+NUTRITION,PACKAGED NATURAL SNACKS,1264.53,Discretionary,snacks_other,extended,"Snack-type items whose content is mixed or borderline (crackers, nuts, popcorn, snack bars).",0,1,1
+NUTRITION,BEVERAGE,1238.54,Neutral,other_beverages,,Habit or convenience beverages that are neither basic need nor clear indulgence.,0,0,0
+DRUG GM,ETHNIC PERSONAL CARE,1164.79,Necessity,personal_hygiene,,Basic personal hygiene and grooming.,0,0,0
+PASTRY,DELI SUPPLIES,1128.75,Exclude,nonmerchandise_commodity,,"Fuel, coupon/misc line, deposit, prepaid card, ticket, service or store supply (fails the scope test).",0,0,0
+GROCERY,BIRD SEED,1120.03,Neutral,pet,,"Pet food and supplies: forgoable by the household but a duty to the animal, not an indulgence.",0,0,0
+DRUG GM,GLASSWARE & DINNERWARE,1117.07,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+COUP/STR & MFG,COUPONS/STORE & MFG,1027.72,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+PASTRY,BAKERY PARTY TRAYS,972.43,Neutral,baking_misc_food,,"Optional or mixed-use food items (baking inputs, party trays, dough, croutons).",0,0,0
+DRUG GM,HOME FREEZING & CANNING SUPPLY,963.53,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+DRUG GM,CONTINUITIES,805.99,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+DELI,DELI SUPPLIES,801.04,Exclude,nonmerchandise_commodity,,"Fuel, coupon/misc line, deposit, prepaid card, ticket, service or store supply (fails the scope test).",0,0,0
+RESTAURANT,COFFEE SHOP,774.85,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+RESTAURANT,QUICK SERVICE,719.54,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+NUTRITION,DRY TEA/COFFEE/COCO MIX,710.83,Neutral,other_beverages,,Habit or convenience beverages that are neither basic need nor clear indulgence.,0,0,0
+DRUG GM,LONG DISTANCE CALLING CARDS,690.57,Exclude,nonmerchandise_commodity,,"Fuel, coupon/misc line, deposit, prepaid card, ticket, service or store supply (fails the scope test).",0,0,0
+DRUG GM,CIGARS,668.75,Discretionary,tobacco,extended,Tobacco: vice/habit good that is forgone without compromising basic needs.,0,0,1
+FROZEN GROCERY,UNKNOWN,646.87,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+DRUG GM,SHOE CARE,637.49,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+NUTRITION,BABYFOOD,633.49,Necessity,infant,,Infant feeding and care.,0,0,0
+FLORAL,FLORAL-ACCESSORIES,604.15,Discretionary,seasonal_gifts_floral,extended,"Gifts, celebration, seasonal and floral goods.",0,0,1
+FLORAL,GIFT & FRUIT BASKETS,599.87,Discretionary,seasonal_gifts_floral,extended,"Gifts, celebration, seasonal and floral goods.",0,0,1
+MEAT,VEAL,537.96,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+NUTRITION,NON EDIBLE PRODUCTS,507.64,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+GARDEN CENTER,UNKNOWN,503.16,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+RESTAURANT,COFFEE SHOP SWEET GOODS&RETAIL,492.37,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+AUTOMOTIVE,COUPON,451.66,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+DELI,SERVICE BEVERAGE,393.63,Neutral,other_beverages,,Habit or convenience beverages that are neither basic need nor clear indulgence.,0,0,0
+NUTRITION,BREAD,376.9,Necessity,bakery_staples,,Bread and basic bakery staples.,0,0,0
+DRUG GM,SEWING,363.25,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+DRUG GM,DOLLAR VALUE PRODUCTS,354.63,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+NUTRITION,NATURAL VITAMINS,328.17,Neutral,wellness_beauty,,"Health-food section, supplements and skin/hair items: not basic needs, not clearly indulgent.",0,0,0
+GROCERY,FRZN SEAFOOD,314.29,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+COSMETICS,COUPON/MISC ITEMS,313.24,Exclude,nonmerchandise_commodity,,"Fuel, coupon/misc line, deposit, prepaid card, ticket, service or store supply (fails the scope test).",0,0,0
+MEAT,(CORP USE ONLY),283.4,Exclude,nonmerchandise_commodity,,"Fuel, coupon/misc line, deposit, prepaid card, ticket, service or store supply (fails the scope test).",0,0,0
+DRUG GM,WATCHES/CALCULATORS/LOBBY,258.75,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+DRUG GM,NATURAL HBC,214.49,Neutral,wellness_beauty,,"Health-food section, supplements and skin/hair items: not basic needs, not clearly indulgent.",0,0,0
+SEAFOOD,MEAT SUPPLIES,201.95,Exclude,nonmerchandise_commodity,,"Fuel, coupon/misc line, deposit, prepaid card, ticket, service or store supply (fails the scope test).",0,0,0
+DRUG GM,COUPON/MISC ITEMS,185.2,Exclude,nonmerchandise_commodity,,"Fuel, coupon/misc line, deposit, prepaid card, ticket, service or store supply (fails the scope test).",0,0,0
+RX,PHARMACY,147.56,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+GROCERY,RESTRICTED DIET,131.05,Necessity,health_otc,,Over-the-counter health and medical needs.,0,0,0
+DRUG GM,HOME HEALTH CARE,126.07,Necessity,health_otc,,Over-the-counter health and medical needs.,0,0,0
+GROCERY,BOTTLE DEPOSITS,116.6,Exclude,nonmerchandise_commodity,,"Fuel, coupon/misc line, deposit, prepaid card, ticket, service or store supply (fails the scope test).",0,0,0
+GM MERCH EXP,COUPON/MISC ITEMS,92.06,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+DRUG GM,MISCELLANEOUS HBC,87.4,Neutral,wellness_beauty,,"Health-food section, supplements and skin/hair items: not basic needs, not clearly indulgent.",0,0,0
+FLORAL,BOUQUET (NON ROSE),80.9,Discretionary,seasonal_gifts_floral,extended,"Gifts, celebration, seasonal and floral goods.",0,0,1
+SALAD BAR,PROD SUPPLIES,74.47,Exclude,nonmerchandise_commodity,,"Fuel, coupon/misc line, deposit, prepaid card, ticket, service or store supply (fails the scope test).",0,0,0
+MEAT,MEAT SUPPLIES,71.64,Exclude,nonmerchandise_commodity,,"Fuel, coupon/misc line, deposit, prepaid card, ticket, service or store supply (fails the scope test).",0,0,0
+DAIRY DELI,EGGS,67.45,Necessity,dairy_eggs,,Staple dairy and eggs.,0,0,0
+MEAT,RW FRESH PROCESSED MEAT,58.77,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+CNTRL/STORE SUP,COUPON/MISC ITEMS,49.05,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+PRODUCE,DRIED FRUIT,48.66,Neutral,wellness_beauty,,"Health-food section, supplements and skin/hair items: not basic needs, not clearly indulgent.",0,0,0
+MEAT,MEAT - MISC,42.68,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+PHOTO,REFRGRATD DOUGH PRODUCTS,41.400000000000006,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+NUTRITION,BULK FOODS,41.02,Neutral,wellness_beauty,,"Health-food section, supplements and skin/hair items: not basic needs, not clearly indulgent.",0,0,0
+NUTRITION,ORGANICS FRUIT & VEGETABLES,40.39,Necessity,produce,,Fresh fruit and vegetables.,0,0,0
+DELI/SNACK BAR,DELI SUPPLIES,36.08,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+DRUG GM,FD WRAPS/BAGS/TRSH BG,36.03,Necessity,household_consumables,,Cleaning and paper consumables needed to run a household.,0,0,0
+VIDEO,BEERS/ALES,34.769999999999996,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+FLORAL,EASTER LILY,31.98,Discretionary,seasonal_gifts_floral,extended,"Gifts, celebration, seasonal and floral goods.",0,0,1
+DRUG GM,FRAGRANCES,29.99,Discretionary,personal_indulgence,core,"Cosmetics, fragrance and bath/beauty products (proposal lists cosmetics).",1,1,1
+PRODUCE,SALAD BAR,28.25,Necessity,prepared_meals,,Ready or convenience meals: a meal is a basic need even when convenience-priced.,0,0,0
+SEAFOOD-PCKGD,PKG.SEAFOOD MISC,27.92,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+PRODUCE,PROD SUPPLIES,23.69,Exclude,nonmerchandise_commodity,,"Fuel, coupon/misc line, deposit, prepaid card, ticket, service or store supply (fails the scope test).",0,0,0
+VIDEO RENTAL,UNKNOWN,21.46,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+POSTAL CENTER,CANDY - PACKAGED,17.41,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+PHARMACY SUPPLY,COUPON/MISC ITEMS,16.92,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+SEAFOOD,SEAFOOD - MISC,16.43,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+PORK,PORK,15.7,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+MEAT-PCKGD,FROZEN PACKAGE MEAT,12.99,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+RX,COUPON/MISC ITEMS,12.0,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+NUTRITION,NDAIRY/TEAS/JUICE/SOD,11.78,Neutral,other_beverages,,Habit or convenience beverages that are neither basic need nor clear indulgence.,0,0,0
+TOYS,TOYS,9.84,Discretionary,media_leisure,extended,"Leisure, entertainment and hobby goods.",0,0,1
+HBC,INFANT CARE PRODUCTS,9.42,Necessity,infant,,Infant feeding and care.,0,0,0
+GM MERCH EXP,UNKNOWN,9.04,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+CHARITABLE CONT,UNKNOWN,7.74,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+PROD-WHS SALES,PROD SUPPLIES,7.52,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+MEAT-WHSE,COUPON,7.0,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+POSTAL CENTER,CANDY - CHECKLANE,6.6000000000000005,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+FROZEN GROCERY,MISCELLANEOUS CROUTONS,6.39,Neutral,baking_misc_food,,"Optional or mixed-use food items (baking inputs, party trays, dough, croutons).",0,0,0
+DAIRY DELI,MILK BY-PRODUCTS,5.78,Necessity,dairy_eggs,,Staple dairy and eggs.,0,0,0
+TRAVEL & LEISUR,TROPICAL FRUIT,5.720000000000001,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+TRAVEL & LEISUR,MELONS,4.4,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+TRAVEL & LEISUR,BERRIES,3.0,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+HOUSEWARES,UNKNOWN,2.99,Neutral,household_goods_misc,,"Utilitarian household, hardware, apparel and general merchandise.",0,0,0
+FLORAL,PROD SUPPLIES,2.99,Exclude,nonmerchandise_commodity,,"Fuel, coupon/misc line, deposit, prepaid card, ticket, service or store supply (fails the scope test).",0,0,0
+DELI,COFFEE SHOP,2.97,Neutral,baking_misc_food,,"Optional or mixed-use food items (baking inputs, party trays, dough, croutons).",0,0,0
+PRODUCE,MISCELLANEOUS(CORP USE ONLY),2.29,Exclude,nonmerchandise_commodity,,"Fuel, coupon/misc line, deposit, prepaid card, ticket, service or store supply (fails the scope test).",0,0,0
+MEAT,LUNCHMEAT,2.2,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+GRO BAKERY,SNACK NUTS,2.18,Discretionary,snacks_other,extended,"Snack-type items whose content is mixed or borderline (crackers, nuts, popcorn, snack bars).",0,1,1
+ELECT &PLUMBING,COUPON,1.0,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+AUTOMOTIVE,NEWSPAPER,1.0,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
+MEAT,MISCELLANEOUS,0.95,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+MEAT,BACON,0.3,Necessity,meat_seafood,,Staple protein foods needed for household nutrition.,0,0,0
+,,0.0,Exclude,service_or_nonmerchandise_dept,,"Department is a service area, store-use or non-merchandise category (fails the scope test).",0,0,0
