@@ -19,7 +19,7 @@ effects, serial correlation, heteroskedasticity and cross-sectional dependence.
 The raw association between savings and discretionary spending is positive (0.532) but
 disappears once necessity spending is controlled, so it reflects basket size. In the
 preferred model, savings have no positive association with discretionary spending
-(−$0.018 per $1; 95% CI −0.045 to 0.009) or with its share, and all three hypotheses are
+or with its share, and all three hypotheses are
 not supported. The coupon association with the share is mechanical, since it comes from
 coupons on discretionary items. Results hold across 16 alternative specifications.
 
