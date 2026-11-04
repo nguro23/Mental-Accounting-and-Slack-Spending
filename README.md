@@ -2,7 +2,30 @@
 
 **Evidence of Discretionary Reallocation of Promotional Savings from the Dunnhumby Dataset**
 
-Replication code for the undergraduate thesis by Mwangi David Nguro (BBS Financial Economics, Strathmore University). The thesis asks whether households treat promotional savings on necessity goods as a windfall and move them into discretionary purchases, as mental accounting predicts. It tests this on household-week panel data built from *Dunnhumby: The Complete Journey*.
+**Abstract**
+
+This study examines whether households treat promotional savings on necessity goods
+as a windfall and redirect them to discretionary purchases, as mental accounting
+predicts. Using the Dunnhumby Complete Journey data, it builds an unbalanced panel of
+55,180 household-weeks from 801 loyalty-card households over 102 weeks.
+
+Three hypotheses were tested one-sided at the 5% level: that necessity savings raise
+discretionary spending (H1), that savings and coupon redemptions raise the discretionary
+share of the basket (H2), and that any effect persists after controls and fixed effects (H3).
+Pooled, Mundlak correlated-random-effects and two-way fixed-effects models were
+estimated with household-clustered standard errors, after tests for poolability, random
+effects, serial correlation, heteroskedasticity and cross-sectional dependence.
+
+The raw association between savings and discretionary spending is positive (0.532) but
+disappears once necessity spending is controlled, so it reflects basket size. In the
+preferred model, savings have no positive association with discretionary spending
+(−$0.018 per $1; 95% CI −0.045 to 0.009) or with its share, and all three hypotheses are
+not supported. The coupon association with the share is mechanical, since it comes from
+coupons on discretionary items. Results hold across 16 alternative specifications.
+
+They are associations at one retailer, and do not show that mental accounting is absent.
+Future work should use unexpected discounts, trip-level inventory data and experimental
+variation.
 
 Everything runs from one notebook, [`main.ipynb`](main.ipynb). It reproduces the commodity classification (thesis Appendix A) and every table, figure and report used in Chapter 4, starting from the raw Dunnhumby files.
 
